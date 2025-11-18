@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+    background: #fafafa;
+    margin: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#chart {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+svg {
+    overflow: visible;
+}
+
+.region-layer {
+    stroke: black;
+    stroke-width: 1px;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.region-layer:hover {
+    opacity: 1;
+}
