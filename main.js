@@ -1,6 +1,4 @@
-// -----------------------------
-// CONFIG
-// -----------------------------
+// structure for page
 const margin = { top: 60, right: 180, bottom: 60, left: 70 };
 const width  = 1100 - margin.left - margin.right;
 const height = 600  - margin.top  - margin.bottom;
@@ -56,17 +54,19 @@ function rollingAverage(arr, windowSize=3) {
 // load and process the hpi data
 d3.csv("hpi_master.csv").then(hpi => {
 
-    // Parse fields
+    // Parse columns of dataset
     hpi.forEach(d => {
         d.yr = +d.yr;
         d.period = +d.period;
         d.index_sa = +d.index_sa;
 
-        // Create date
+        // Creates date to organize chronologically
         d.date = new Date(d.yr, d.period - 1, 1);
     });
 
-    // Use only Census Division rows
+    // Use only Census Division rows for most basic region
+    // this category is basically what makes up the four quadrants of the us.
+    // going forward we will need to use the individual states of course.
     const divisionRows = hpi.filter(d => d.level === "USA or Census Division");
 
     // Group by date
@@ -93,9 +93,7 @@ d3.csv("hpi_master.csv").then(hpi => {
     // sort by date
     regionSeries.sort((a, b) => a.date - b.date);
 
-    // --------------------------------------
-// Convert monthly region data → Yearly averages
-// --------------------------------------
+// Average out the data year over year to make the graph actually look good
 const yearlyMap = d3.group(regionSeries, d => d.date.getFullYear());
 
 const yearlySeries = [];
@@ -147,9 +145,7 @@ yearlySeries.sort((a, b) => a.date - b.date)
         .y1(d => y(d[1]))
         .curve(d3.curveBasis);
 
-    // -----------------------------
-    // DRAW AREAS
-    // -----------------------------
+    // Draws in the areas
     svg.selectAll(".layer")
         .data(stackedData)
         .enter()
@@ -161,9 +157,7 @@ yearlySeries.sort((a, b) => a.date - b.date)
         .attr("stroke-width", 1.5)
         .attr("opacity", 0.9);
 
-    // -----------------------------
-    // AXES
-    // -----------------------------
+    // xyaxis
     svg.append("g")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x).tickSize(6).tickPadding(8));
@@ -200,5 +194,4 @@ yearlySeries.sort((a, b) => a.date - b.date)
             .style("font-size", "14px")
             .text(region.charAt(0).toUpperCase() + region.slice(1));
     });
-
 });
