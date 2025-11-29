@@ -18,6 +18,11 @@ svg {
     overflow: visible;
 }
 
+.table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .region-layer {
     stroke: black;
     stroke-width: 1px;
