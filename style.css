@@ -65,7 +65,6 @@ body {
     padding: 20px 20px 28px;
     background: #020617;
     border-radius: 18px;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
     border: 1px solid #1f2937;
 }
 
@@ -173,7 +172,6 @@ svg {
 }
 
 #tooltip {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
     position: absolute;
     background: white;
     border: 1px solid #111827;
