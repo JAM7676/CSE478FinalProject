@@ -454,6 +454,20 @@ const stateData = HPI.filter((d) => d.level === "State");
     let bubbleData = prepareYearData(years[currentYearIndex]);
 
 
+    // creating tooltip
+    const tooltip = d3.select("body")
+    .append("div")
+    .attr("class", "tooltip")
+    .style("position", "absolute")
+    .style("background", "rgba(0, 0, 0, 0.8)")
+    .style("color", "white")
+    .style("padding", "10px")
+    .style("border-radius", "5px")
+    .style("pointer-events", "none")
+    .style("opacity", 0)
+    .style("font-size", "14px")
+    .style("z-index", 1000);
+
     // creating circles
     let bubbles = bsvg
     .selectAll(".bubble")
@@ -467,7 +481,7 @@ const stateData = HPI.filter((d) => d.level === "State");
     .attr("opacity", 0.8)
     .on("mouseover", function(event, d) {
         d3.select(this)
-            .attr("stroke-width", 3)
+            .attr("stroke-width", 2)
             .attr("opacity", 1);
         tooltip
             .style("opacity", 1)
@@ -486,23 +500,10 @@ const stateData = HPI.filter((d) => d.level === "State");
         d3.select(this)
             .attr("stroke-width", 1)
             .attr("opacity", 0.8);
-        
+
         tooltip.style("opacity", 0);
     });
 
-    // creating tooltip
-    const tooltip = d3.select("body")
-    .append("div")
-    .attr("class", "tooltip")
-    .style("position", "absolute")
-    .style("background", "rgba(0, 0, 0, 0.8)")
-    .style("color", "white")
-    .style("padding", "10px")
-    .style("border-radius", "5px")
-    .style("pointer-events", "none")
-    .style("opacity", 0)
-    .style("font-size", "14px")
-    .style("z-index", 1000);
 
     // adding labels
     let labels = bsvg
@@ -552,45 +553,51 @@ const stateData = HPI.filter((d) => d.level === "State");
             .text(region.charAt(0).toUpperCase() + region.slice(1));
     });
 
-    //animation/slider
+    // slider
     const slider = d3.select("#yearSlider")
     .attr("min", 0)
     .attr("max", years.length - 1)
     .attr("value", 0)
-    .on("input", function() {
-        currentYearIndex = +this.value;
-        updateBubbles(years[currentYearIndex]);
-        d3.select("#currentYear").text(years[currentYearIndex]);
-    });
+    .on("input", handleSlider);
 
-    // Display initial year
     d3.select("#currentYear").text(years[0]);
 
-    let animationInterval = null;
-    let setPlaying = false;
+    // play and pause
+    let isPlaying = false;
+    let playTimer = null;
 
-    d3.select("#playButton").on("click", function() {
-        if (setPlaying) {
-            // pauses the year slider
-            clearInterval(animationInterval);
-            d3.select(this).text("Play");
-            setPlaying = false;
-        } 
-        else {
-            // plays the year slider
-            d3.select(this).text("Pause");
-            setPlaying = true;
-            animationInterval = setInterval(() => {
-                currentYearIndex++;
-                if (currentYearIndex >= years.length) {
-                    currentYearIndex = 0;
-                }
-                slider.property("value", currentYearIndex);
-                updateBubbles(years[currentYearIndex]);
-                d3.select("#currentYear").text(years[currentYearIndex]);
-            }, 200);
-        }
+    d3.select("#playButton").on("click", () => {
+    isPlaying ? animationStop() : animationStart();
     });
+
+    // functions for the slider and playpause button
+    function handleSlider() {
+        currentYearIndex = +this.value;
+        renderYear();
+    }
+
+    function renderYear() {
+        updateBubbles(years[currentYearIndex]);
+        d3.select("#currentYear").text(years[currentYearIndex]);
+        slider.property("value", currentYearIndex);
+    }
+
+    function animationStart() {
+        isPlaying = true;
+        d3.select("#playButton").text("Pause");
+
+        playTimer = setInterval(() => {
+            currentYearIndex = (currentYearIndex + 1) % years.length;
+            renderYear();
+        }, 500);
+    }
+
+    function animationStop() {
+        isPlaying = false;
+        clearInterval(playTimer);
+        d3.select("#playButton").text("Play");
+    }
+
 
     function updateBubbles(year) {
 
@@ -614,12 +621,12 @@ const stateData = HPI.filter((d) => d.level === "State");
         bsvg.select("#bubble-title").text(`US Housing Price Index Bubble Chart By State - ${year}`);
         
         bubbles = bsvg.selectAll(".bubble").data(bubbleData, (d) => d.id);
+
         bubbles.transition().duration(200).attr("r", (d) => radiusScale(d.hpi));
 
         labels = bsvg.selectAll(".bubble-label").data(bubbleData, (d) => d.id);
 
-        simulation.nodes(bubbleData);
-        simulation.force("collision").radius((d) => radiusScale(d.hpi) + 2);
+        simulation.nodes(bubbleData).force("collision").radius((d) => radiusScale(d.hpi) + 2);
         simulation.alpha(0.1).restart();
     }
 
