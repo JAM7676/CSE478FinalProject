@@ -1,11 +1,89 @@
 body {
+    margin: 0;
     font-family: sans-serif;
-    background: #fafafa;
-    margin: 30px;
+    background: white;
+    color: black;
 }
 
-h1 {
-    text-align: center;
+.page-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px 8px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    text-align: left;
+    letter-spacing: 0.03em;
+}
+
+.subtitle {
+    margin: 6px 0 16px;
+    color: #393c41;
+    font-size: 0.95rem;
+}
+
+.Nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.Tab {
+    border: 1px solid #374151;
+    background: #111827;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 999px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.Tab:hover {
+    background: #1f2937;
+    border-color: #60a5fa;
+    transform: translateY(-1px);
+}
+
+.Tab.active {
+    background: #2563eb;
+    border-color: #60a5fa;
+    color: white;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 16px 32px;
+}
+
+.the-section {
+    display: none;
+    margin-top: 20px;
+    padding: 20px 20px 28px;
+    background: #020617;
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+    border: 1px solid #1f2937;
+}
+
+.the-section.active {
+    display: block;
+}
+
+.the-section h2 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.description {
+    margin: 0 0 14px;
+    font-size: 0.9rem;
+    color: #9ca3af;
 }
 
 #chart {
@@ -18,9 +96,97 @@ svg {
     overflow: visible;
 }
 
+#chart svg,
+#bubblechart svg,
+#treemap_svg {
+    display: block;
+    margin: 12px auto 0;
+    max-width: 100%;
+}
+
+.bubble-controls {
+    max-width: 900px;
+    margin: 12px auto 4px;
+}
+
+.bubble-controls input[type="range"] {
+    width: 100%;
+}
+
+.bubble-controls-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+}
+
+#currentYear {
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+#playButton {
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: none;
+    background: #10b981;
+    color: #022c22;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+#playButton:hover {
+    background: #34d399;
+}
+
+.year-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 12px;
+}
+
 .table {
+    border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
+}
+
+.table td {
+    padding: 4px;
+}
+
+.yearbtn {
+    min-width: 64px;
+    padding: 6px 8px;
+    border-radius: 999px;
+    border: 1px solid #374151;
+    background: #111827;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.yearbtn:hover {
+    background: #1f2937;
+    border-color: #60a5fa;
+    transform: translateY(-1px);
+}
+
+#tooltip {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    position: absolute;
+    background: white;
+    border: 1px solid #111827;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+    color: #111827;
+    pointer-events: none;
+    opacity: 0;
+}
+
+svg text {
+    fill: #e5e7eb;
 }
 
 .region-layer {

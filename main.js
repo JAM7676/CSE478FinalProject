@@ -1,3 +1,19 @@
+const tabs = document.querySelectorAll('.Tab');
+const sections = document.querySelectorAll('.the-section');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+    const targetId = tab.dataset.target;
+
+    tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    sections.forEach(sec => {
+        sec.classList.toggle('active', sec.id === targetId);
+    });
+    });
+});
+
 const margin = {
     top: 60,
     right: 200,
