@@ -1,4 +1,22 @@
-// config for page
+// controller for switching tabs/views
+const tabs = document.querySelectorAll('.button_base');
+const sections = document.querySelectorAll('.the-section');
+
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const targetId = tab.dataset.target;
+
+        // Update tab active state
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        // Show only the matching section
+        sections.forEach(sec => {
+            sec.classList.toggle('active', sec.id === targetId);
+        });
+    });
+});
+
 const margin = {
     top: 60,
     right: 200,
@@ -8,6 +26,7 @@ const margin = {
 const width = 1100 - margin.left - margin.right;
 const height = 600 - margin.top - margin.bottom;
 
+// Main streamgraph svg
 const svg = d3.select("#chart")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
@@ -15,34 +34,32 @@ const svg = d3.select("#chart")
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
-// bubble svg
+// bubble chart svg
 const bsvg = d3
-  .select("#bubblechart")
-  .append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-  .attr("transform", `translate(${margin.left},${margin.top})`);
+    .select("#bubblechart")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", `translate(${margin.left},${margin.top})`);
 
-// region, division, state definitions. We have to be
-// explicit because there is no mapping in the csv
+
+// map for division to region
 const DIVISION_TO_REGION = {
     "New England Division": "northeast",
     "Middle Atlantic Division": "northeast",
-
     "East North Central Division": "midwest",
     "West North Central Division": "midwest",
-
     "South Atlantic Division": "south",
     "East South Central Division": "south",
     "West South Central Division": "south",
-
     "Mountain Division": "west",
     "Pacific Division": "west"
 };
 
 const REGION_LIST = ["west", "south", "midwest", "northeast"];
 
+// colors for streamgraph and bubble chart regions
 const REGION_COLORS = {
     west: "#1f77b4",
     south: "#aec7e8",
@@ -50,7 +67,7 @@ const REGION_COLORS = {
     northeast: "#ff7f0e"
 };
 
-// Divisions to states map
+// map for divisions to states
 const DIVISION_TO_STATES = {
     "New England Division": ["CT", "ME", "MA", "NH", "RI", "VT"],
     "Middle Atlantic Division": ["NJ", "NY", "PA"],
@@ -68,18 +85,18 @@ let CURRENT_REGION = null;
 let CURRENT_DIVISION = null;
 
 
-// function that uses regex to get the state for a city
-// so if we are looking for all Arizona cities, we need
-// to look for the substring ", AZ" in something like "Chandler, AZ"
+// helper function that gets the 2 letter abreveation for a state
+// such as AZ for arizona
 function extractState(place) {
     const m = place.match(/,\s*([A-Z]{2})$/);
     return m ? m[1] : null;
 }
 
 
-// load the csv
+// load hpi and get dates
 d3.csv("hpi_master.csv").then(raw => {
 
+    // converts data from csv to be usable dates
     raw.forEach(d => {
         d.yr = +d.yr;
         d.period = +d.period;
@@ -90,13 +107,12 @@ d3.csv("hpi_master.csv").then(raw => {
     window.HPI = raw;
 
     drawRegions();
-    drawBubbleChart();  //draws the bubble Chart
+    drawBubbleChart();
 });
 
 
-// Region focused functions things like West and South
+// region level data for streamgraph
 function drawRegions() {
-
     CURRENT_LEVEL = "region";
     CURRENT_REGION = null;
     CURRENT_DIVISION = null;
@@ -107,6 +123,7 @@ function drawRegions() {
     const byYear = d3.group(rows, d => d.date.getFullYear());
     const yearly = [];
 
+    // gets regions yearly avgs
     for (const [yr, vals] of byYear.entries()) {
         const row = {
             date: new Date(yr, 0, 1)
@@ -126,7 +143,7 @@ function drawRegions() {
         yearly.push(row);
     }
 
-    // Remove pre 1990 data
+    // keep 1990 and up years since regions only have data going back to 1990
     const filtered = yearly.filter(r => r.date.getFullYear() >= 1990);
     filtered.sort((a, b) => a.date - b.date);
 
@@ -139,6 +156,7 @@ function drawRegions() {
     );
 }
 
+// moves from region to division level
 function onRegionClick(region) {
     CURRENT_LEVEL = "division";
     CURRENT_REGION = region;
@@ -146,10 +164,8 @@ function onRegionClick(region) {
 }
 
 
-// division focused code, things like pacific and southwest
-// are subdivisions of west region
+// division level data for streamgraph
 function drawDivisions(region) {
-
     clearSVG();
 
     const rows = HPI.filter(d => d.level === "USA or Census Division");
@@ -160,6 +176,7 @@ function drawDivisions(region) {
 
     const yearly = [];
 
+    // gets yearly division avgs
     for (const [yr, vals] of byYear.entries()) {
         const row = {
             date: new Date(yr, 0, 1)
@@ -193,6 +210,7 @@ function drawDivisions(region) {
     showBackButton(drawRegions);
 }
 
+// moves from division to state level
 function onDivisionClick(division) {
     CURRENT_LEVEL = "state";
     CURRENT_DIVISION = division;
@@ -200,9 +218,8 @@ function onDivisionClick(division) {
 }
 
 
-// draws state stacks
+// state level data for streamgraph
 function drawStates(division) {
-
     clearSVG();
 
     const stateList = DIVISION_TO_STATES[division];
@@ -213,16 +230,14 @@ function drawStates(division) {
     const byYear = d3.group(rows, d => d.date.getFullYear());
     const yearly = [];
 
+    // gets uyearly state avgs
     for (const [yr, vals] of byYear.entries()) {
         const row = {
             date: new Date(yr, 0, 1)
         };
 
         for (const st of stateList) {
-            const nums = vals
-                .filter(v => v.place_id === st)
-                .map(v => v.index_nsa);
-
+            const nums = vals.filter(v => v.place_id === st).map(v => v.index_nsa);
             row[st] = nums.length ? d3.mean(nums) : null;
         }
 
@@ -246,7 +261,6 @@ function drawStates(division) {
 }
 
 
-// clear svg
 function clearSVG() {
     svg.selectAll("*").remove();
 }
@@ -265,41 +279,36 @@ function showBackButton(callback) {
 }
 
 
-// stacked areas renderer
+// stack renderer
 function renderStackedArea(data, keys, colors, title, clickHandler = null) {
 
     clearSVG();
 
-    // sort the keys by the final 2025 index_nsa values
     const lastDate = d3.max(data, d => d.date);
+
+    // orders layers by final value
     const sortedKeys = keys.slice().sort((a, b) => {
-        const finalA = data.find(d => d.date.getTime() === lastDate.getTime())[a] ?? 0;
-        const finalB = data.find(d => d.date.getTime() === lastDate.getTime())[b] ?? 0;
-        return finalA - finalB; // smallest bottom → largest top
+        const finalRow = data.find(d => d.date.getTime() === lastDate.getTime());
+        return (finalRow?.[a] ?? 0) - (finalRow?.[b] ?? 0);
     });
 
-    // x scale
     const x = d3.scaleTime()
         .domain([new Date(1990, 0, 1), lastDate])
         .range([0, width]);
 
-    // stack
     const stack = d3.stack().keys(sortedKeys);
     const stackedData = stack(data);
 
-    // y scale
     const y = d3.scaleLinear()
         .domain([0, d3.max(stackedData.at(-1), d => d[1])])
         .range([height, 0]);
 
-    // Area generator
     const area = d3.area()
         .curve(d3.curveMonotoneX)
         .x(d => x(d.data.date))
         .y0(d => y(d[0]))
         .y1(d => y(d[1]));
 
-    // Draw stacked layers
     svg.selectAll(".layer")
         .data(stackedData)
         .enter().append("path")
@@ -312,7 +321,6 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
         .style("cursor", clickHandler ? "pointer" : "default")
         .on("click", (event, d) => clickHandler && clickHandler(d.key));
 
-    // hide y labels
     svg.append("g")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x));
@@ -320,9 +328,8 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
     svg.append("g")
         .call(d3.axisLeft(y).tickFormat(() => ""));
 
-    // shows the final 2025 data on the right side of each of the stacks
+    // labels end values of each layer, which is just the 2025 index_nsa value
     stackedData.forEach(layer => {
-        const key = layer.key;
         const lastPoint = layer.find(p => p.data.date.getTime() === lastDate.getTime());
         if (!lastPoint) return;
 
@@ -334,35 +341,10 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
             .attr("alignment-baseline", "middle")
             .style("font-size", "13px")
             .style("font-weight", "600")
-            .style("fill", colors[key])
-            .text(Math.round(lastPoint.data[key]));
+            .style("fill", colors[layer.key])
+            .text(Math.round(lastPoint.data[layer.key]));
     });
 
-
-    // makes sure that the left side starts at 1990 because the regional data starts at
-    // 1990 but a lot of the other data has dates going back to the 70's
-    const firstDate = d3.min(data, d => d.date);
-
-    stackedData.forEach(layer => {
-        const key = layer.key;
-        const firstPoint = layer.find(p => p.data.date.getTime() === firstDate.getTime());
-        if (!firstPoint) return;
-
-        const yMidLeft = (firstPoint[0] + firstPoint[1]) / 2;
-
-        svg.append("text")
-            .attr("x", -10)
-            .attr("y", y(yMidLeft))
-            .attr("text-anchor", "end")
-            .attr("alignment-baseline", "middle")
-            .style("font-size", "13px")
-            .style("font-weight", "600")
-            .style("fill", colors[key])
-            .text(Math.round(firstPoint.data[key]));
-    });
-    
-
-    // Title
     svg.append("text")
         .attr("x", width / 2)
         .attr("y", -20)
@@ -371,7 +353,6 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
         .style("font-weight", "bold")
         .text(title);
 
-    // Legend
     const legend = svg.append("g")
         .attr("transform", `translate(${width + 80}, 20)`);
 
@@ -393,256 +374,432 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
     });
 }
 
-///////////////////////////
-// CODE FOR BUBBLE CHART //
-///////////////////////////
+
+// bubble graph code
 function drawBubbleChart() {
-const stateData = HPI.filter((d) => d.level === "State");
+    const stateData = HPI.filter(d => d.level === "State");
+    const statesByYear = d3.group(stateData, d => d.yr);
+    const years = Array.from(statesByYear.keys()).sort((a, b) => a - b);
 
-  const statesByYear = d3.group(stateData, (d) => d.yr);
-  const years = Array.from(statesByYear.keys()).sort((a,b) => a - b);
-
-  const STATE_TO_REGION = {};
+    // maps state to a region
+    const STATE_TO_REGION = {};
     Object.entries(DIVISION_TO_STATES).forEach(([division, states]) => {
         const region = DIVISION_TO_REGION[division];
-        states.forEach((stateId) => {
-            STATE_TO_REGION[stateId] = region;
-        });
+        states.forEach(stateId => STATE_TO_REGION[stateId] = region);
     });
 
+    // calculates number for a bubble
+    function prepareYearData(year) {
+        const yearData = statesByYear.get(year);
+        if (!yearData) return [];
 
-  function prepareYearData(year){
-    const yearData = statesByYear.get(year);
-    if (!yearData) return [];
+        const regionSeries = [];
+        const stateMap = d3.group(yearData, d => d.place_id);
 
-    const regionSeries = [];
+        stateMap.forEach((rows, stateId) => {
+            const averageHPI = d3.mean(rows, d => d.index_nsa);
+            const region = STATE_TO_REGION[stateId] || "west";
 
-    const stateMap = d3.group(yearData, (d) => d.place_id);
-
-    stateMap.forEach((rows, stateId) => {
-        const averageHPI = d3.mean(rows, (d) => d.index_nsa);
-        const region = STATE_TO_REGION[stateId] || "west";
-
-        regionSeries.push({
-        name: rows[0].place_name,
-        id: stateId,
-        abbr: stateId,
-        hpi: averageHPI,
-        region: region,
-        x: width/2,
-        y: height/2,
+            regionSeries.push({
+                name: rows[0].place_name,
+                id: stateId,
+                abbr: stateId,
+                hpi: averageHPI,
+                region: region,
+                x: width / 2,
+                y: height / 2,
+            });
         });
-    });
-    return regionSeries};
 
+        return regionSeries;
+    }
 
-    const allHPIValues = years.flatMap(year => 
-    prepareYearData(year).map(d => d.hpi)
+    // gets range of hpi for radius range
+    const allHPIValues = years.flatMap(year =>
+        prepareYearData(year).map(d => d.hpi)
     );
     const globalMaxHPI = d3.max(allHPIValues);
 
-    // radius scale
     const radiusScale = d3.scaleSqrt()
-    .domain([0, globalMaxHPI])
-    .range([8, 45]);
+        .domain([0, globalMaxHPI])
+        .range([8, 45]);
 
-    // force simulation
-    const simulation = d3.forceSimulation().force("charge", d3.forceManyBody().strength(2)).force("center", d3.forceCenter(width/2, height/2)).force("collision", d3.forceCollide().radius((d) => radiusScale(d.hpi) + 2)).force("x", d3.forceX(width / 2).strength(0.15)).force("y", d3.forceY(height / 2).strength(0.15)).velocityDecay(0.2)
-    .alphaDecay(0.02).on("tick",ticked).alpha(0.3);
+    // force sim for colliding bubbles
+    const simulation = d3.forceSimulation()
+        .force("charge", d3.forceManyBody().strength(2))
+        .force("center", d3.forceCenter(width / 2, height / 2))
+        .force("collision", d3.forceCollide().radius(d => radiusScale(d.hpi) + 2))
+        .force("x", d3.forceX(width / 2).strength(0.15))
+        .force("y", d3.forceY(height / 2).strength(0.15))
+        .velocityDecay(0.2)
+        .alphaDecay(0.02)
+        .on("tick", ticked)
+        .alpha(0.3);
 
     let currentYearIndex = 0;
     let bubbleData = prepareYearData(years[currentYearIndex]);
 
-
-    // creating tooltip
+    // tooltip (different from treemap tooltip because developed at the same time separately)
     const tooltip = d3.select("body")
-    .append("div")
-    .attr("class", "tooltip")
-    .style("position", "absolute")
-    .style("background", "rgba(0, 0, 0, 0.8)")
-    .style("color", "white")
-    .style("padding", "10px")
-    .style("border-radius", "5px")
-    .style("pointer-events", "none")
-    .style("opacity", 0)
-    .style("font-size", "14px")
-    .style("z-index", 1000);
+        .append("div")
+        .attr("class", "tooltip")
+        .style("position", "absolute")
+        .style("background", "rgba(0, 0, 0, 0.8)")
+        .style("color", "white")
+        .style("padding", "10px")
+        .style("border-radius", "5px")
+        .style("pointer-events", "none")
+        .style("opacity", 0)
+        .style("font-size", "14px")
+        .style("z-index", 1000);
 
-    // creating circles
+    // bubbles
     let bubbles = bsvg
-    .selectAll(".bubble")
-    .data(bubbleData, (d) => d.id)
-    .join("circle")
-    .attr("class", "bubble")
-    .attr("r", (d) => radiusScale(d.hpi))
-    .attr("fill", (d) => REGION_COLORS[d.region])
-    .attr("stroke", "black")
-    .attr("stroke-width", 1)
-    .attr("opacity", 0.8)
-    .on("mouseover", function(event, d) {
-        d3.select(this)
-            .attr("stroke-width", 2)
-            .attr("opacity", 1);
-        tooltip
-            .style("opacity", 1)
-            .html(`
+        .selectAll(".bubble")
+        .data(bubbleData, d => d.id)
+        .join("circle")
+        .attr("class", "bubble")
+        .attr("r", d => radiusScale(d.hpi))
+        .attr("fill", d => REGION_COLORS[d.region])
+        .attr("stroke", "black")
+        .attr("stroke-width", 1)
+        .attr("opacity", 0.8)
+        .on("mouseover", function(event, d) {
+            d3.select(this).attr("stroke-width", 3).attr("opacity", 1);
+            tooltip.style("opacity", 1).html(`
                 <strong>${d.name}</strong><br/>
                 HPI: ${d.hpi.toFixed(2)}<br/>
                 Region: ${d.region.charAt(0).toUpperCase() + d.region.slice(1)}
             `);
-    })
-    .on("mousemove", function(event) {
-        tooltip
-            .style("left", (event.pageX + 15) + "px")
-            .style("top", (event.pageY - 28) + "px");
-    })
-    .on("mouseout", function() {
-        d3.select(this)
-            .attr("stroke-width", 1)
-            .attr("opacity", 0.8);
+        })
+        .on("mousemove", function(event) {
+            tooltip.style("left", (event.pageX + 15) + "px")
+                .style("top", (event.pageY - 28) + "px");
+        })
+        .on("mouseout", function() {
+            d3.select(this).attr("stroke-width", 1).attr("opacity", 0.8);
+            tooltip.style("opacity", 0);
+        });
 
-        tooltip.style("opacity", 0);
-    });
-
-
-    // adding labels
+    // bubble labels
     let labels = bsvg
-    .selectAll(".bubble-label")
-    .data(bubbleData, (d) => d.id)
-    .join("text")
-    .attr("class", "bubble-label")
-    .attr("text-anchor", "middle")
-    .attr("font-size", "14px")
-    .attr("font-weight", "700")
-    .attr("pointer-events", "none")
-    .attr("fill", "white")
-    .style("text-shadow", "1px 1px 2px black")
-    .text((d) => d.abbr);
+        .selectAll(".bubble-label")
+        .data(bubbleData, d => d.id)
+        .join("text")
+        .attr("class", "bubble-label")
+        .attr("text-anchor", "middle")
+        .attr("font-size", "14px")
+        .attr("font-weight", "700")
+        .attr("pointer-events", "none")
+        .attr("fill", "white")
+        .style("text-shadow", "1px 1px 2px black")
+        .text(d => d.abbr);
 
     simulation.nodes(bubbleData);
 
-    //title
-    bsvg
-    .append("text")
-    .attr("x", width / 2)
-    .attr("y", -20)
-    .attr("text-anchor", "middle")
-    .style("font-size", "28px")
-    .style("font-weight", "bold")
-    .attr("id", "bubble-title")
-    .text(`US Housing Price Index Bubble Chart By State - ${years[currentYearIndex]}`);
+    bsvg.append("text")
+        .attr("x", width / 2)
+        .attr("y", -20)
+        .attr("text-anchor", "middle")
+        .style("font-size", "28px")
+        .style("font-weight", "bold")
+        .attr("id", "bubble-title")
+        .text(`US Housing Price Index Bubble Chart By State - ${years[currentYearIndex]}`);
 
+    // region legend
     const bubbleLegend = bsvg.append("g")
-    .attr("transform", `translate(${width - 120}, 20)`);
+        .attr("transform", `translate(${width - 120}, 20)`);
 
     REGION_LIST.forEach((region, i) => {
-        const g = bubbleLegend.append("g")
-            .attr("transform", `translate(0, ${i * 30})`);
-
-            g.append("circle")
+        const g = bubbleLegend.append("g").attr("transform", `translate(0, ${i * 30})`);
+        g.append("circle")
             .attr("cx", 10)
             .attr("cy", 10)
             .attr("r", 10)
             .attr("fill", REGION_COLORS[region])
             .attr("stroke", "black");
-
-            g.append("text")
+        g.append("text")
             .attr("x", 26)
             .attr("y", 15)
             .style("font-size", "14px")
             .text(region.charAt(0).toUpperCase() + region.slice(1));
     });
 
-    // slider
+    // updates slider lavbel
     const slider = d3.select("#yearSlider")
-    .attr("min", 0)
-    .attr("max", years.length - 1)
-    .attr("value", 0)
-    .on("input", handleSlider);
+        .attr("min", 0)
+        .attr("max", years.length - 1)
+        .attr("value", 0)
+        .on("input", function() {
+            currentYearIndex = +this.value;
+            updateBubbles(years[currentYearIndex]);
+            d3.select("#currentYear").text(years[currentYearIndex]);
+        });
 
     d3.select("#currentYear").text(years[0]);
 
-    // play and pause
-    let isPlaying = false;
-    let playTimer = null;
+    let animationInterval = null;
+    let setPlaying = false;
 
-    d3.select("#playButton").on("click", () => {
-    isPlaying ? animationStop() : animationStart();
+    d3.select("#playButton").on("click", function() {
+        if (setPlaying) {
+            clearInterval(animationInterval);
+            d3.select(this).text("Play");
+            setPlaying = false;
+        } else {
+            d3.select(this).text("Pause");
+            setPlaying = true;
+            animationInterval = setInterval(() => {
+                currentYearIndex = (currentYearIndex + 1) % years.length;
+                slider.property("value", currentYearIndex);
+                updateBubbles(years[currentYearIndex]);
+                d3.select("#currentYear").text(years[currentYearIndex]);
+            }, 200);
+        }
     });
 
-    // functions for the slider and playpause button
-    function handleSlider() {
-        currentYearIndex = +this.value;
-        renderYear();
-    }
-
-    function renderYear() {
-        updateBubbles(years[currentYearIndex]);
-        d3.select("#currentYear").text(years[currentYearIndex]);
-        slider.property("value", currentYearIndex);
-    }
-
-    function animationStart() {
-        isPlaying = true;
-        d3.select("#playButton").text("Pause");
-
-        playTimer = setInterval(() => {
-            currentYearIndex = (currentYearIndex + 1) % years.length;
-            renderYear();
-        }, 500);
-    }
-
-    function animationStop() {
-        isPlaying = false;
-        clearInterval(playTimer);
-        d3.select("#playButton").text("Play");
-    }
-
-
+    // shows bubbles for given year
     function updateBubbles(year) {
 
-        // stores the old positions
+        // keeps old positions for smooth transitions
         const oldPositions = new Map();
         bubbleData.forEach(d => {
-        oldPositions.set(d.id, { x: d.x, y: d.y });
+            oldPositions.set(d.id, {
+                x: d.x,
+                y: d.y
+            });
         });
 
         bubbleData = prepareYearData(year);
-        
-        // restores the old positions
+
+        // forces old positions
         bubbleData.forEach(d => {
-        const oldPos = oldPositions.get(d.id);
-        if (oldPos) {
-            d.x = oldPos.x;
-            d.y = oldPos.y;
-        }
+            const oldPos = oldPositions.get(d.id);
+            if (oldPos) {
+                d.x = oldPos.x;
+                d.y = oldPos.y;
+            }
         });
 
-        bsvg.select("#bubble-title").text(`US Housing Price Index Bubble Chart By State - ${year}`);
-        
-        bubbles = bsvg.selectAll(".bubble").data(bubbleData, (d) => d.id);
+        bsvg.select("#bubble-title")
+            .text(`US Housing Price Index Bubble Chart By State - ${year}`);
 
-        bubbles.transition().duration(200).attr("r", (d) => radiusScale(d.hpi));
+        bubbles = bsvg.selectAll(".bubble").data(bubbleData, d => d.id);
+        bubbles.transition().duration(200).attr("r", d => radiusScale(d.hpi));
 
-        labels = bsvg.selectAll(".bubble-label").data(bubbleData, (d) => d.id);
+        labels = bsvg.selectAll(".bubble-label").data(bubbleData, d => d.id);
 
-        simulation.nodes(bubbleData).force("collision").radius((d) => radiusScale(d.hpi) + 2);
+        simulation.nodes(bubbleData);
+        simulation.force("collision").radius(d => radiusScale(d.hpi) + 2);
         simulation.alpha(0.1).restart();
     }
 
-    // tick function for the simulation
     function ticked() {
-        bubbles.attr("cx", (d) => {
-            const radius = radiusScale(d.hpi);
-            d.x = Math.max(radius, Math.min(width - radius, d.x)); 
-            return d.x;
-        })
-         .attr("cy", (d) => {
-            const radius = radiusScale(d.hpi);
-            d.y = Math.max(radius, Math.min(height - radius, d.y)); 
-            return d.y;
+        bubbles
+            .attr("cx", d => {
+                const radius = radiusScale(d.hpi);
+                d.x = Math.max(radius, Math.min(width - radius, d.x));
+                return d.x;
+            })
+            .attr("cy", d => {
+                const radius = radiusScale(d.hpi);
+                d.y = Math.max(radius, Math.min(height - radius, d.y));
+                return d.y;
+            });
+
+        labels.attr("x", d => d.x).attr("y", d => d.y + 4);
+    }
+}
+
+
+// treemap controller
+let selectedYear = 2001;
+
+window.addEventListener("load", function() {
+    getSelectedYearsData(selectedYear);
+
+    const buttons = document.getElementsByClassName("yearbtn");
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = function() {
+            selectedYear = parseInt(this.id);
+            getSelectedYearsData(selectedYear);
+        };
+    }
+});
+
+
+// loads tree map for a given year
+function getSelectedYearsData(pickedYear) {
+    Promise.all([
+        d3.csv("hpi_final_agg.csv"),
+        d3.csv("cpi_aggregate.csv")
+    ]).then(([hpiRaw, cpiRaw]) => {
+
+        // type conversions
+        hpiRaw.forEach(d => {
+            d.yr = +d.yr;
+            d.hpi_agg = +d.hpi_agg;
         });
 
-        labels.attr("x", (d) => d.x).attr("y", (d) => d.y + 4);
-    }
+        cpiRaw.forEach(d => {
+            d.year = +d.year;
+            d.CPI_agg = +d.CPI_agg;
+        });
+
+        const selectedYearLocal = pickedYear;
+        const prevYear = selectedYearLocal - 1;
+
+        // build lookup state -> year -> hpi value
+        const hpiByStateYear = {};
+        for (let i = 0; i < hpiRaw.length; i++) {
+            const row = hpiRaw[i];
+            const key = row.place_id + "_" + row.yr;
+            hpiByStateYear[key] = {
+                value: row.hpi_agg,
+                name: row.place_name
+            };
+        }
+
+        // cpi lookup
+        const cpiByYear = {};
+        cpiRaw.forEach(d => cpiByYear[d.year] = d.CPI_agg);
+
+        const cpiCurr = cpiByYear[selectedYearLocal];
+        const cpiPrev = cpiByYear[prevYear];
+        if (cpiCurr == null || cpiPrev == null) return;
+
+        const cpiChange = (cpiCurr - cpiPrev) / cpiPrev;
+
+        const moreAffordable = [];
+        const lessAffordable = [];
+
+        // compare each states hpi vs cpi change
+        const statesThisYear = hpiRaw.filter(d => d.yr === selectedYearLocal);
+
+        for (let i = 0; i < statesThisYear.length; i++) {
+            const d = statesThisYear[i];
+            const stateCode = d.place_id;
+            const keyCurr = stateCode + "_" + selectedYearLocal;
+            const keyPrev = stateCode + "_" + prevYear;
+
+            const currObj = hpiByStateYear[keyCurr];
+            const prevObj = hpiByStateYear[keyPrev];
+            if (!currObj || !prevObj || prevObj.value === 0) continue;
+
+            const hpiChange = (currObj.value - prevObj.value) / prevObj.value;
+
+            const stateNode = {
+                name: stateCode,
+                fullName: d.place_name,
+                value: currObj.value,
+                hpiChange: hpiChange,
+                cpiChange: cpiChange
+            };
+
+            if (hpiChange <= cpiChange) moreAffordable.push(stateNode);
+            else lessAffordable.push(stateNode);
+        }
+
+        // treemap root structure
+        const treeMapReady = {
+            name: "States",
+            children: [{
+                    name: "More affordable",
+                    children: moreAffordable
+                },
+                {
+                    name: "Less affordable",
+                    children: lessAffordable
+                }
+            ]
+        };
+
+        makeTreeMap(treeMapReady, selectedYearLocal);
+    });
+}
+
+
+// render treemap
+function makeTreeMap(treeMapReady, yearLabel) {
+
+    d3.select("#treemap_svg").selectAll("*").remove();
+
+    const marginLocal = {
+        top: 10,
+        right: 10,
+        bottom: 10,
+        left: 10
+    };
+    const widthLocal = 580 - marginLocal.left - marginLocal.right;
+    const heightLocal = 400 - marginLocal.top - marginLocal.bottom;
+
+    const svgLocal = d3.select("#treemap_svg")
+        .attr("width", 580)
+        .attr("height", 400);
+
+    svgLocal.append("text")
+        .attr("x", 10)
+        .attr("y", 18)
+        .style("font-size", "16px")
+        .style("font-weight", "bold")
+        .text("Treemap for: " + yearLabel);
+
+    const g = svgLocal.append("g")
+        .attr("transform", "translate(" + marginLocal.left + "," + marginLocal.top + ")");
+
+    // declare heirarchy
+    const root = d3.hierarchy(treeMapReady).sum(d => d.value);
+
+    const tooltip = d3.select("#tooltip");
+
+    // computes treemap layout
+    d3.treemap()
+        .size([widthLocal, heightLocal])
+        .paddingTop(5)
+        .paddingRight(2)
+        .paddingInner(2)
+        (root);
+
+    const color = d3.scaleOrdinal()
+        .domain(["More affordable", "Less affordable"])
+        .range(["#4CAF50", "#F44336"]);
+
+    // scale opacity by hpi
+    const values = root.leaves().map(d => d.data.value);
+    const opacity = d3.scaleLinear()
+        .domain(d3.extent(values))
+        .range([0.6, 1])
+        .clamp(true);
+
+    g.selectAll("rect")
+        .data(root.leaves())
+        .enter()
+        .append("rect")
+        .attr("x", d => d.x0)
+        .attr("y", d => d.y0)
+        .attr("width", d => d.x1 - d.x0)
+        .attr("height", d => d.y1 - d.y0)
+        .style("stroke", "black")
+        .style("stroke-width", "1px")
+        .style("fill", d => color(d.parent.data.name))
+        .style("opacity", d => opacity(d.data.value))
+        .on("mouseover", (event, d) => {
+            tooltip.transition().duration(100).style("opacity", 1);
+            tooltip.html(
+                `State: ${d.data.fullName} (${d.data.name})<br/>` +
+                `HPI change: ${(d.data.hpiChange * 100).toFixed(1)}%<br/>` +
+                `CPI change: ${(d.data.cpiChange * 100).toFixed(1)}%<br/>` +
+                `Affordability: ${d.parent.data.name}`
+            );
+        })
+        .on("mousemove", event => {
+            tooltip.style("left", (event.pageX + 10) + "px")
+                .style("top", (event.pageY + 10) + "px");
+        })
+        .on("mouseout", () => {
+            tooltip.transition().duration(100).style("opacity", 0);
+        })
+        .on("click", (event, d) => {
+            console.log("clicked state:", d.data.name);
+        });
 }

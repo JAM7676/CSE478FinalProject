@@ -1,12 +1,199 @@
 body {
+    margin: 0;
     font-family: sans-serif;
-    background: #fafafa;
-    margin: 30px;
+    background: #000000ec;  /* pure black */
+    color: #ffffff;
 }
 
-h1 {
-    text-align: center;
+svg {
+    overflow: visible;
 }
+
+svg text {
+    fill: #ffffff;
+}
+
+#chart svg,
+#bubblechart svg,
+#treemap_svg {
+    display: block;
+    margin: 12px auto 0;
+    max-width: 100%;
+}
+
+
+/* page layout*/
+.page-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 16px 8px;
+}
+
+.page-header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    text-align: left;
+    letter-spacing: 0.03em;
+}
+
+.subtitle {
+    color: #ffffffb2;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    padding: 0 16px 32px;
+}
+
+
+/* area background behind interactive*/
+.the-section {
+    display: none;
+    margin-top: 20px;
+    padding: 20px 20px 28px;
+    background: #111111;
+    border-radius: 18px;
+    border: 1px solid #132719; 
+}
+
+.the-section.active {
+    display: block;
+}
+
+.the-section h2 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.description {
+    margin: 0 0 14px;
+    font-size: 0.9rem;
+    color: #ffffffb2;
+}
+
+.Nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+
+/* buttons*/
+.button_base {
+    border: 1px solid #3a3a3a;
+    background: #1a1a1a; 
+    color: #e5e5e5;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.button_base:hover {
+    background: #1a1a1a;
+    border-color: #ffffffb2;
+    transform: translateY(-1px);
+}
+
+.button_base.active,
+.button_selected {
+    background: #444444;  /* medium gray active */
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+
+.yearbtn {
+    border: 1px solid #3a3a3a;
+    background: #1a1a1a;
+    color: #e5e5e5;
+    padding: 10px 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.yearbtn:hover {
+    background: #2a2a2a;
+    border-color: #808080;
+    transform: translateY(-1px);
+}
+
+
+/* bubble chart */
+.bubble-controls {
+    max-width: 900px;
+    margin: 12px auto 4px;
+}
+
+.bubble-controls input[type="range"] {
+    width: 100%;
+}
+
+.bubble-controls-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6px;
+}
+
+#currentYear {
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+#playButton {
+    padding: 6px 16px;
+    border-radius: 999px;
+    border: none;
+    background: #10b981;
+    color: #022c22;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+#playButton:hover {
+    background: #34d399;
+}
+
+
+/* treemap */
+.year-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 12px;
+}
+
+.table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.table td {
+    padding: 4px;
+}
+
+
+/* tt */
+#tooltip {
+    position: absolute;
+    background: #1f1f1f;
+    border: 1px solid #3a3a3a;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 14px;
+    color: #ffffff;
+    pointer-events: none;
+    opacity: 0;
+}
+
 
 #chart {
     width: 100%;
@@ -14,10 +201,8 @@ h1 {
     position: relative;
 }
 
-svg {
-    overflow: visible;
-}
 
+/* regions */
 .region-layer {
     stroke: black;
     stroke-width: 1px;
