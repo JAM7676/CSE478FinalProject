@@ -1,0 +1,1786 @@
+﻿place_name,place_id,yr,hpi_agg
+Alaska,AK,1991,405.48
+Alaska,AK,1992,417.19
+Alaska,AK,1993,431.58
+Alaska,AK,1994,447.75
+Alaska,AK,1995,467.16
+Alaska,AK,1996,486.65
+Alaska,AK,1997,499.85
+Alaska,AK,1998,517.15
+Alaska,AK,1999,533.75
+Alaska,AK,2000,546.06
+Alaska,AK,2001,581.63
+Alaska,AK,2002,619.49
+Alaska,AK,2003,664.73
+Alaska,AK,2004,728.01
+Alaska,AK,2005,805.67
+Alaska,AK,2006,870.97
+Alaska,AK,2007,899.58
+Alaska,AK,2008,889.56
+Alaska,AK,2009,875.77
+Alaska,AK,2010,880.25
+Alaska,AK,2011,897.7
+Alaska,AK,2012,896.77
+Alaska,AK,2013,920.83
+Alaska,AK,2014,942.63
+Alaska,AK,2015,971.38
+Alaska,AK,2016,991.08
+Alaska,AK,2017,1003.68
+Alaska,AK,2018,1021.27
+Alaska,AK,2019,1056.67
+Alaska,AK,2020,1104.95
+Alaska,AK,2021,1220.78
+Alaska,AK,2022,1337.1
+Alaska,AK,2023,1405
+Alaska,AK,2024,1477.56
+Alaska,AK,2025,761.46
+Alabama,AL,1991,407.52
+Alabama,AL,1992,423.75
+Alabama,AL,1993,443.79
+Alabama,AL,1994,465.24
+Alabama,AL,1995,481.67
+Alabama,AL,1996,499.69
+Alabama,AL,1997,515.21
+Alabama,AL,1998,532.79
+Alabama,AL,1999,552.46
+Alabama,AL,2000,568.79
+Alabama,AL,2001,584.37
+Alabama,AL,2002,602.75
+Alabama,AL,2003,628.52
+Alabama,AL,2004,659.18
+Alabama,AL,2005,707.86
+Alabama,AL,2006,769.58
+Alabama,AL,2007,802.03
+Alabama,AL,2008,782.65
+Alabama,AL,2009,762.32
+Alabama,AL,2010,721.75
+Alabama,AL,2011,686.04
+Alabama,AL,2012,700.23
+Alabama,AL,2013,719.67
+Alabama,AL,2014,734.69
+Alabama,AL,2015,755.8
+Alabama,AL,2016,783.28
+Alabama,AL,2017,816.82
+Alabama,AL,2018,859.8
+Alabama,AL,2019,910.11
+Alabama,AL,2020,986
+Alabama,AL,2021,1140.48
+Alabama,AL,2022,1302.06
+Alabama,AL,2023,1373.51
+Alabama,AL,2024,1434.13
+Alabama,AL,2025,735.87
+Arkansas,AR,1991,404.81
+Arkansas,AR,1992,417.38
+Arkansas,AR,1993,440.22
+Arkansas,AR,1994,467.94
+Arkansas,AR,1995,487.15
+Arkansas,AR,1996,500.81
+Arkansas,AR,1997,512.81
+Arkansas,AR,1998,524.18
+Arkansas,AR,1999,541.85
+Arkansas,AR,2000,557.86
+Arkansas,AR,2001,577.82
+Arkansas,AR,2002,600.23
+Arkansas,AR,2003,631.44
+Arkansas,AR,2004,674.39
+Arkansas,AR,2005,720.11
+Arkansas,AR,2006,760.73
+Arkansas,AR,2007,775.3
+Arkansas,AR,2008,752.78
+Arkansas,AR,2009,740.59
+Arkansas,AR,2010,713.7
+Arkansas,AR,2011,704.79
+Arkansas,AR,2012,722.49
+Arkansas,AR,2013,741.02
+Arkansas,AR,2014,753.97
+Arkansas,AR,2015,770.33
+Arkansas,AR,2016,793.81
+Arkansas,AR,2017,824.19
+Arkansas,AR,2018,857.64
+Arkansas,AR,2019,895.12
+Arkansas,AR,2020,953.78
+Arkansas,AR,2021,1104.58
+Arkansas,AR,2022,1269.14
+Arkansas,AR,2023,1352.47
+Arkansas,AR,2024,1421.19
+Arkansas,AR,2025,728.36
+Arizona,AZ,1991,401.2
+Arizona,AZ,1992,409.87
+Arizona,AZ,1993,425.03
+Arizona,AZ,1994,453.28
+Arizona,AZ,1995,478.74
+Arizona,AZ,1996,501.4
+Arizona,AZ,1997,519.36
+Arizona,AZ,1998,544.44
+Arizona,AZ,1999,575.94
+Arizona,AZ,2000,609.17
+Arizona,AZ,2001,645.85
+Arizona,AZ,2002,684.11
+Arizona,AZ,2003,739.86
+Arizona,AZ,2004,845.79
+Arizona,AZ,2005,1101.59
+Arizona,AZ,2006,1265.25
+Arizona,AZ,2007,1226.32
+Arizona,AZ,2008,1006.2
+Arizona,AZ,2009,812.08
+Arizona,AZ,2010,729.75
+Arizona,AZ,2011,657.16
+Arizona,AZ,2012,745.53
+Arizona,AZ,2013,865.81
+Arizona,AZ,2014,926.6
+Arizona,AZ,2015,988.69
+Arizona,AZ,2016,1059.94
+Arizona,AZ,2017,1144.67
+Arizona,AZ,2018,1238.76
+Arizona,AZ,2019,1327.45
+Arizona,AZ,2020,1477.47
+Arizona,AZ,2021,1837.09
+Arizona,AZ,2022,2145.65
+Arizona,AZ,2023,2175.94
+Arizona,AZ,2024,2262.66
+Arizona,AZ,2025,1139.81
+California,CA,1991,398.84
+California,CA,1992,390.81
+California,CA,1993,368.67
+California,CA,1994,352.93
+California,CA,1995,344.18
+California,CA,1996,340.86
+California,CA,1997,348.99
+California,CA,1998,380.22
+California,CA,1999,418.7
+California,CA,2000,470.96
+California,CA,2001,533.26
+California,CA,2002,609.8
+California,CA,2003,714.98
+California,CA,2004,885.04
+California,CA,2005,1081.8
+California,CA,2006,1128.29
+California,CA,2007,1028.51
+California,CA,2008,761.51
+California,CA,2009,660.19
+California,CA,2010,657.02
+California,CA,2011,613.51
+California,CA,2012,645.25
+California,CA,2013,764.18
+California,CA,2014,841.07
+California,CA,2015,900.58
+California,CA,2016,963.68
+California,CA,2017,1037.97
+California,CA,2018,1104.71
+California,CA,2019,1147.86
+California,CA,2020,1234.22
+California,CA,2021,1463.75
+California,CA,2022,1615.17
+California,CA,2023,1625.76
+California,CA,2024,1690.69
+California,CA,2025,852.94
+Colorado,CO,1991,406.84
+Colorado,CO,1992,438.9
+Colorado,CO,1993,488.7
+Colorado,CO,1994,547.88
+Colorado,CO,1995,580.95
+Colorado,CO,1996,611.57
+Colorado,CO,1997,639.94
+Colorado,CO,1998,680.58
+Colorado,CO,1999,748.56
+Colorado,CO,2000,832.5
+Colorado,CO,2001,907.31
+Colorado,CO,2002,943.81
+Colorado,CO,2003,965.34
+Colorado,CO,2004,1001.81
+Colorado,CO,2005,1052.41
+Colorado,CO,2006,1087.9
+Colorado,CO,2007,1089.83
+Colorado,CO,2008,1044.16
+Colorado,CO,2009,1042.94
+Colorado,CO,2010,1025
+Colorado,CO,2011,991.98
+Colorado,CO,2012,1043.79
+Colorado,CO,2013,1136.91
+Colorado,CO,2014,1226.71
+Colorado,CO,2015,1364.53
+Colorado,CO,2016,1500.99
+Colorado,CO,2017,1641.84
+Colorado,CO,2018,1782.04
+Colorado,CO,2019,1877.14
+Colorado,CO,2020,2022.35
+Colorado,CO,2021,2384
+Colorado,CO,2022,2683.58
+Colorado,CO,2023,2694.48
+Colorado,CO,2024,2766.72
+Colorado,CO,2025,1391.02
+Connecticut,CT,1991,391.33
+Connecticut,CT,1992,383.54
+Connecticut,CT,1993,367.79
+Connecticut,CT,1994,366.69
+Connecticut,CT,1995,362.98
+Connecticut,CT,1996,364.45
+Connecticut,CT,1997,369.48
+Connecticut,CT,1998,386.85
+Connecticut,CT,1999,419.37
+Connecticut,CT,2000,457
+Connecticut,CT,2001,501.18
+Connecticut,CT,2002,556.95
+Connecticut,CT,2003,616.16
+Connecticut,CT,2004,684.7
+Connecticut,CT,2005,754.22
+Connecticut,CT,2006,781.51
+Connecticut,CT,2007,780.03
+Connecticut,CT,2008,736.31
+Connecticut,CT,2009,693.3
+Connecticut,CT,2010,669.42
+Connecticut,CT,2011,648.42
+Connecticut,CT,2012,633.76
+Connecticut,CT,2013,639.76
+Connecticut,CT,2014,641.77
+Connecticut,CT,2015,646.55
+Connecticut,CT,2016,649.47
+Connecticut,CT,2017,663.61
+Connecticut,CT,2018,677.98
+Connecticut,CT,2019,693.84
+Connecticut,CT,2020,744.63
+Connecticut,CT,2021,870.2
+Connecticut,CT,2022,971.39
+Connecticut,CT,2023,1061.99
+Connecticut,CT,2024,1156.34
+Connecticut,CT,2025,612.26
+District of Columbia,DC,1991,391.16
+District of Columbia,DC,1992,390.83
+District of Columbia,DC,1993,373.69
+District of Columbia,DC,1994,377.2
+District of Columbia,DC,1995,357.8
+District of Columbia,DC,1996,370.31
+District of Columbia,DC,1997,363.47
+District of Columbia,DC,1998,401.03
+District of Columbia,DC,1999,442.17
+District of Columbia,DC,2000,508.34
+District of Columbia,DC,2001,587.75
+District of Columbia,DC,2002,700.46
+District of Columbia,DC,2003,804.47
+District of Columbia,DC,2004,986.65
+District of Columbia,DC,2005,1214.86
+District of Columbia,DC,2006,1283.59
+District of Columbia,DC,2007,1312.65
+District of Columbia,DC,2008,1256.38
+District of Columbia,DC,2009,1204.85
+District of Columbia,DC,2010,1244.24
+District of Columbia,DC,2011,1278.33
+District of Columbia,DC,2012,1370.01
+District of Columbia,DC,2013,1536.67
+District of Columbia,DC,2014,1645.39
+District of Columbia,DC,2015,1747.17
+District of Columbia,DC,2016,1832.38
+District of Columbia,DC,2017,1952.66
+District of Columbia,DC,2018,2075.88
+District of Columbia,DC,2019,2134.47
+District of Columbia,DC,2020,2259.62
+District of Columbia,DC,2021,2472.16
+District of Columbia,DC,2022,2520.65
+District of Columbia,DC,2023,2454.99
+District of Columbia,DC,2024,2483.44
+District of Columbia,DC,2025,1219.7
+Delaware,DE,1991,400.72
+Delaware,DE,1992,400.89
+Delaware,DE,1993,396.56
+Delaware,DE,1994,395.81
+Delaware,DE,1995,398.38
+Delaware,DE,1996,400.19
+Delaware,DE,1997,404.91
+Delaware,DE,1998,418.86
+Delaware,DE,1999,441.48
+Delaware,DE,2000,470.6
+Delaware,DE,2001,508.71
+Delaware,DE,2002,556.84
+Delaware,DE,2003,614.3
+Delaware,DE,2004,699.05
+Delaware,DE,2005,796.77
+Delaware,DE,2006,868.43
+Delaware,DE,2007,872.78
+Delaware,DE,2008,821.06
+Delaware,DE,2009,785.93
+Delaware,DE,2010,741.93
+Delaware,DE,2011,698.03
+Delaware,DE,2012,691.57
+Delaware,DE,2013,718.42
+Delaware,DE,2014,719.3
+Delaware,DE,2015,739.8
+Delaware,DE,2016,759.59
+Delaware,DE,2017,773.53
+Delaware,DE,2018,813.84
+Delaware,DE,2019,839.8
+Delaware,DE,2020,899.47
+Delaware,DE,2021,1033.1
+Delaware,DE,2022,1168.34
+Delaware,DE,2023,1229.85
+Delaware,DE,2024,1326.47
+Delaware,DE,2025,673.87
+Florida,FL,1991,400.78
+Florida,FL,1992,406.08
+Florida,FL,1993,415.17
+Florida,FL,1994,427.25
+Florida,FL,1995,437.54
+Florida,FL,1996,446.85
+Florida,FL,1997,457.08
+Florida,FL,1998,475.95
+Florida,FL,1999,501.23
+Florida,FL,2000,538.33
+Florida,FL,2001,593.3
+Florida,FL,2002,661.18
+Florida,FL,2003,746.84
+Florida,FL,2004,882.5
+Florida,FL,2005,1109.32
+Florida,FL,2006,1233.38
+Florida,FL,2007,1169.34
+Florida,FL,2008,910.11
+Florida,FL,2009,750.35
+Florida,FL,2010,709.4
+Florida,FL,2011,667.91
+Florida,FL,2012,712.08
+Florida,FL,2013,791.49
+Florida,FL,2014,853.34
+Florida,FL,2015,932.01
+Florida,FL,2016,1019.92
+Florida,FL,2017,1106.57
+Florida,FL,2018,1192.16
+Florida,FL,2019,1261.98
+Florida,FL,2020,1373.14
+Florida,FL,2021,1660.06
+Florida,FL,2022,2032.49
+Florida,FL,2023,2147.22
+Florida,FL,2024,2224.24
+Florida,FL,2025,1103.23
+Georgia,GA,1991,401.35
+Georgia,GA,1992,409.27
+Georgia,GA,1993,419.36
+Georgia,GA,1994,434.06
+Georgia,GA,1995,451.72
+Georgia,GA,1996,471.4
+Georgia,GA,1997,490.66
+Georgia,GA,1998,518.99
+Georgia,GA,1999,555.41
+Georgia,GA,2000,592.09
+Georgia,GA,2001,624.41
+Georgia,GA,2002,651.86
+Georgia,GA,2003,676.33
+Georgia,GA,2004,702.12
+Georgia,GA,2005,743.01
+Georgia,GA,2006,782.56
+Georgia,GA,2007,795.55
+Georgia,GA,2008,738.33
+Georgia,GA,2009,688.62
+Georgia,GA,2010,639.56
+Georgia,GA,2011,591.82
+Georgia,GA,2012,609.6
+Georgia,GA,2013,668.57
+Georgia,GA,2014,716.55
+Georgia,GA,2015,762.12
+Georgia,GA,2016,810.5
+Georgia,GA,2017,865.82
+Georgia,GA,2018,933.29
+Georgia,GA,2019,989.26
+Georgia,GA,2020,1076.96
+Georgia,GA,2021,1270.09
+Georgia,GA,2022,1492.85
+Georgia,GA,2023,1583.29
+Georgia,GA,2024,1673.48
+Georgia,GA,2025,851.91
+Hawaii,HI,1991,399.16
+Hawaii,HI,1992,406.99
+Hawaii,HI,1993,406.99
+Hawaii,HI,1994,400.53
+Hawaii,HI,1995,385.79
+Hawaii,HI,1996,363.96
+Hawaii,HI,1997,337.81
+Hawaii,HI,1998,337.68
+Hawaii,HI,1999,336.04
+Hawaii,HI,2000,363.45
+Hawaii,HI,2001,395.55
+Hawaii,HI,2002,437.32
+Hawaii,HI,2003,506.78
+Hawaii,HI,2004,630.36
+Hawaii,HI,2005,783.11
+Hawaii,HI,2006,854.96
+Hawaii,HI,2007,856.83
+Hawaii,HI,2008,812.68
+Hawaii,HI,2009,734.47
+Hawaii,HI,2010,705.2
+Hawaii,HI,2011,665.82
+Hawaii,HI,2012,705.84
+Hawaii,HI,2013,770.37
+Hawaii,HI,2014,818.75
+Hawaii,HI,2015,863.01
+Hawaii,HI,2016,889.83
+Hawaii,HI,2017,954.12
+Hawaii,HI,2018,992.27
+Hawaii,HI,2019,1029.46
+Hawaii,HI,2020,1093.15
+Hawaii,HI,2021,1264.96
+Hawaii,HI,2022,1461.68
+Hawaii,HI,2023,1502.56
+Hawaii,HI,2024,1600.27
+Hawaii,HI,2025,803.31
+Iowa,IA,1991,407.18
+Iowa,IA,1992,427.95
+Iowa,IA,1993,458.22
+Iowa,IA,1994,485.51
+Iowa,IA,1995,507.43
+Iowa,IA,1996,529.71
+Iowa,IA,1997,546.02
+Iowa,IA,1998,572.46
+Iowa,IA,1999,600.91
+Iowa,IA,2000,625.67
+Iowa,IA,2001,648.56
+Iowa,IA,2002,671.28
+Iowa,IA,2003,697.12
+Iowa,IA,2004,727.06
+Iowa,IA,2005,755.84
+Iowa,IA,2006,781.16
+Iowa,IA,2007,795.27
+Iowa,IA,2008,788.6
+Iowa,IA,2009,780.23
+Iowa,IA,2010,775.79
+Iowa,IA,2011,765.55
+Iowa,IA,2012,784.99
+Iowa,IA,2013,809.65
+Iowa,IA,2014,830.15
+Iowa,IA,2015,859.45
+Iowa,IA,2016,893.2
+Iowa,IA,2017,928.91
+Iowa,IA,2018,970.07
+Iowa,IA,2019,1001.34
+Iowa,IA,2020,1055.17
+Iowa,IA,2021,1173.41
+Iowa,IA,2022,1300.53
+Iowa,IA,2023,1375.14
+Iowa,IA,2024,1448.93
+Iowa,IA,2025,744.39
+Idaho,ID,1991,411.15
+Idaho,ID,1992,444.16
+Idaho,ID,1993,484.73
+Idaho,ID,1994,522.87
+Idaho,ID,1995,543.21
+Idaho,ID,1996,553.88
+Idaho,ID,1997,562.7
+Idaho,ID,1998,575.96
+Idaho,ID,1999,592.96
+Idaho,ID,2000,608.28
+Idaho,ID,2001,630.24
+Idaho,ID,2002,648.95
+Idaho,ID,2003,682.9
+Idaho,ID,2004,744.94
+Idaho,ID,2005,855.93
+Idaho,ID,2006,993.57
+Idaho,ID,2007,1046.74
+Idaho,ID,2008,992.87
+Idaho,ID,2009,911.35
+Idaho,ID,2010,801.98
+Idaho,ID,2011,724.96
+Idaho,ID,2012,781.27
+Idaho,ID,2013,853.36
+Idaho,ID,2014,897.99
+Idaho,ID,2015,959.09
+Idaho,ID,2016,1037.5
+Idaho,ID,2017,1140.42
+Idaho,ID,2018,1285.12
+Idaho,ID,2019,1444.2
+Idaho,ID,2020,1663.69
+Idaho,ID,2021,2166.47
+Idaho,ID,2022,2442.38
+Idaho,ID,2023,2425.38
+Idaho,ID,2024,2523.18
+Idaho,ID,2025,1287.25
+Illinois,IL,1991,405.51
+Illinois,IL,1992,420.68
+Illinois,IL,1993,437.81
+Illinois,IL,1994,458.14
+Illinois,IL,1995,472.23
+Illinois,IL,1996,486.28
+Illinois,IL,1997,495.25
+Illinois,IL,1998,509.87
+Illinois,IL,1999,535.92
+Illinois,IL,2000,569.03
+Illinois,IL,2001,608.01
+Illinois,IL,2002,648.56
+Illinois,IL,2003,694.09
+Illinois,IL,2004,741.34
+Illinois,IL,2005,792.32
+Illinois,IL,2006,832.23
+Illinois,IL,2007,837.47
+Illinois,IL,2008,784.68
+Illinois,IL,2009,729.58
+Illinois,IL,2010,701.02
+Illinois,IL,2011,658.81
+Illinois,IL,2012,651.72
+Illinois,IL,2013,675.9
+Illinois,IL,2014,697.78
+Illinois,IL,2015,717.05
+Illinois,IL,2016,740.54
+Illinois,IL,2017,766.99
+Illinois,IL,2018,789.19
+Illinois,IL,2019,808.85
+Illinois,IL,2020,848.9
+Illinois,IL,2021,951.62
+Illinois,IL,2022,1048.19
+Illinois,IL,2023,1116.87
+Illinois,IL,2024,1209.26
+Illinois,IL,2025,632.69
+Indiana,IN,1991,403.66
+Indiana,IN,1992,418.7
+Indiana,IN,1993,438.39
+Indiana,IN,1994,458.97
+Indiana,IN,1995,479.09
+Indiana,IN,1996,498.83
+Indiana,IN,1997,512.06
+Indiana,IN,1998,529.2
+Indiana,IN,1999,548.52
+Indiana,IN,2000,567.92
+Indiana,IN,2001,582.3
+Indiana,IN,2002,595.62
+Indiana,IN,2003,612.47
+Indiana,IN,2004,632.54
+Indiana,IN,2005,651.5
+Indiana,IN,2006,666.54
+Indiana,IN,2007,671.66
+Indiana,IN,2008,647.17
+Indiana,IN,2009,633.39
+Indiana,IN,2010,626.72
+Indiana,IN,2011,619.77
+Indiana,IN,2012,626.44
+Indiana,IN,2013,650.93
+Indiana,IN,2014,667.55
+Indiana,IN,2015,691.92
+Indiana,IN,2016,724.37
+Indiana,IN,2017,763.38
+Indiana,IN,2018,818.52
+Indiana,IN,2019,874.07
+Indiana,IN,2020,954.73
+Indiana,IN,2021,1097.57
+Indiana,IN,2022,1237.92
+Indiana,IN,2023,1317.63
+Indiana,IN,2024,1408.98
+Indiana,IN,2025,726.15
+Kansas,KS,1991,401.25
+Kansas,KS,1992,412.47
+Kansas,KS,1993,433.09
+Kansas,KS,1994,460.63
+Kansas,KS,1995,485.3
+Kansas,KS,1996,505.75
+Kansas,KS,1997,524.53
+Kansas,KS,1998,555.02
+Kansas,KS,1999,587.27
+Kansas,KS,2000,611.19
+Kansas,KS,2001,638.09
+Kansas,KS,2002,662.09
+Kansas,KS,2003,687.98
+Kansas,KS,2004,716.77
+Kansas,KS,2005,745.28
+Kansas,KS,2006,776.05
+Kansas,KS,2007,796.27
+Kansas,KS,2008,784.87
+Kansas,KS,2009,779.14
+Kansas,KS,2010,764.94
+Kansas,KS,2011,740.57
+Kansas,KS,2012,755.62
+Kansas,KS,2013,769.66
+Kansas,KS,2014,800.9
+Kansas,KS,2015,826.23
+Kansas,KS,2016,868.43
+Kansas,KS,2017,906.33
+Kansas,KS,2018,953.07
+Kansas,KS,2019,1000.79
+Kansas,KS,2020,1078.51
+Kansas,KS,2021,1229.21
+Kansas,KS,2022,1369.3
+Kansas,KS,2023,1458.85
+Kansas,KS,2024,1564.16
+Kansas,KS,2025,816.43
+Kentucky,KY,1991,401.61
+Kentucky,KY,1992,417.8
+Kentucky,KY,1993,438.02
+Kentucky,KY,1994,463.36
+Kentucky,KY,1995,482.89
+Kentucky,KY,1996,502.66
+Kentucky,KY,1997,521.76
+Kentucky,KY,1998,541.73
+Kentucky,KY,1999,570.11
+Kentucky,KY,2000,594.47
+Kentucky,KY,2001,614.35
+Kentucky,KY,2002,634.9
+Kentucky,KY,2003,663.15
+Kentucky,KY,2004,694.69
+Kentucky,KY,2005,723.17
+Kentucky,KY,2006,750.38
+Kentucky,KY,2007,762.62
+Kentucky,KY,2008,753.63
+Kentucky,KY,2009,744.81
+Kentucky,KY,2010,740.31
+Kentucky,KY,2011,725.39
+Kentucky,KY,2012,736.49
+Kentucky,KY,2013,754.95
+Kentucky,KY,2014,770.78
+Kentucky,KY,2015,801.86
+Kentucky,KY,2016,838.26
+Kentucky,KY,2017,887.43
+Kentucky,KY,2018,931.18
+Kentucky,KY,2019,975.12
+Kentucky,KY,2020,1048.58
+Kentucky,KY,2021,1197.87
+Kentucky,KY,2022,1342.67
+Kentucky,KY,2023,1435.71
+Kentucky,KY,2024,1525.57
+Kentucky,KY,2025,786.45
+Louisiana,LA,1991,412.09
+Louisiana,LA,1992,434.31
+Louisiana,LA,1993,461.03
+Louisiana,LA,1994,490.06
+Louisiana,LA,1995,511.75
+Louisiana,LA,1996,537.61
+Louisiana,LA,1997,557.91
+Louisiana,LA,1998,584.68
+Louisiana,LA,1999,606.66
+Louisiana,LA,2000,628.26
+Louisiana,LA,2001,650.69
+Louisiana,LA,2002,676.64
+Louisiana,LA,2003,713.66
+Louisiana,LA,2004,757.47
+Louisiana,LA,2005,814.57
+Louisiana,LA,2006,905.18
+Louisiana,LA,2007,945.76
+Louisiana,LA,2008,931.15
+Louisiana,LA,2009,918.47
+Louisiana,LA,2010,912.64
+Louisiana,LA,2011,892.41
+Louisiana,LA,2012,909.54
+Louisiana,LA,2013,947.41
+Louisiana,LA,2014,973.02
+Louisiana,LA,2015,1011.32
+Louisiana,LA,2016,1043.84
+Louisiana,LA,2017,1075.26
+Louisiana,LA,2018,1098.19
+Louisiana,LA,2019,1127.24
+Louisiana,LA,2020,1178.28
+Louisiana,LA,2021,1290.44
+Louisiana,LA,2022,1400.11
+Louisiana,LA,2023,1421.93
+Louisiana,LA,2024,1435.78
+Louisiana,LA,2025,730.62
+Massachusetts,MA,1991,394.45
+Massachusetts,MA,1992,389.21
+Massachusetts,MA,1993,385.89
+Massachusetts,MA,1994,390.61
+Massachusetts,MA,1995,397.19
+Massachusetts,MA,1996,412.4
+Massachusetts,MA,1997,431.55
+Massachusetts,MA,1998,469.62
+Massachusetts,MA,1999,522.78
+Massachusetts,MA,2000,595.33
+Massachusetts,MA,2001,681.72
+Massachusetts,MA,2002,771.57
+Massachusetts,MA,2003,855.32
+Massachusetts,MA,2004,941.51
+Massachusetts,MA,2005,1002.71
+Massachusetts,MA,2006,980.66
+Massachusetts,MA,2007,942.75
+Massachusetts,MA,2008,885.03
+Massachusetts,MA,2009,863.59
+Massachusetts,MA,2010,851.96
+Massachusetts,MA,2011,830.66
+Massachusetts,MA,2012,832.5
+Massachusetts,MA,2013,873.31
+Massachusetts,MA,2014,908
+Massachusetts,MA,2015,947.98
+Massachusetts,MA,2016,996.43
+Massachusetts,MA,2017,1059.77
+Massachusetts,MA,2018,1121.14
+Massachusetts,MA,2019,1173.51
+Massachusetts,MA,2020,1262.26
+Massachusetts,MA,2021,1464.46
+Massachusetts,MA,2022,1611.57
+Massachusetts,MA,2023,1702.83
+Massachusetts,MA,2024,1820.33
+Massachusetts,MA,2025,944.76
+Maryland,MD,1991,403.91
+Maryland,MD,1992,410.18
+Maryland,MD,1993,408.38
+Maryland,MD,1994,410.47
+Maryland,MD,1995,408.64
+Maryland,MD,1996,411.56
+Maryland,MD,1997,413.12
+Maryland,MD,1998,423.6
+Maryland,MD,1999,445.85
+Maryland,MD,2000,476.24
+Maryland,MD,2001,523.92
+Maryland,MD,2002,592.7
+Maryland,MD,2003,677.73
+Maryland,MD,2004,802.31
+Maryland,MD,2005,965.24
+Maryland,MD,2006,1051.73
+Maryland,MD,2007,1058.62
+Maryland,MD,2008,938.21
+Maryland,MD,2009,866.6
+Maryland,MD,2010,833.96
+Maryland,MD,2011,795.02
+Maryland,MD,2012,809.89
+Maryland,MD,2013,854.8
+Maryland,MD,2014,871.54
+Maryland,MD,2015,883.97
+Maryland,MD,2016,917.57
+Maryland,MD,2017,953.14
+Maryland,MD,2018,982.3
+Maryland,MD,2019,1004.28
+Maryland,MD,2020,1067.31
+Maryland,MD,2021,1203.18
+Maryland,MD,2022,1315.13
+Maryland,MD,2023,1376.37
+Maryland,MD,2024,1448.06
+Maryland,MD,2025,743.71
+Maine,ME,1991,401.97
+Maine,ME,1992,402.64
+Maine,ME,1993,389.1
+Maine,ME,1994,391.29
+Maine,ME,1995,390.88
+Maine,ME,1996,405.55
+Maine,ME,1997,411.88
+Maine,ME,1998,434.55
+Maine,ME,1999,466.8
+Maine,ME,2000,509.46
+Maine,ME,2001,565.81
+Maine,ME,2002,632.98
+Maine,ME,2003,702.82
+Maine,ME,2004,778.88
+Maine,ME,2005,857.09
+Maine,ME,2006,873.07
+Maine,ME,2007,871.26
+Maine,ME,2008,843.04
+Maine,ME,2009,822.64
+Maine,ME,2010,799.01
+Maine,ME,2011,781.97
+Maine,ME,2012,776.08
+Maine,ME,2013,796.23
+Maine,ME,2014,810.21
+Maine,ME,2015,832.08
+Maine,ME,2016,868.87
+Maine,ME,2017,916.23
+Maine,ME,2018,976.16
+Maine,ME,2019,1039.83
+Maine,ME,2020,1137.84
+Maine,ME,2021,1370.18
+Maine,ME,2022,1605.63
+Maine,ME,2023,1740.39
+Maine,ME,2024,1865.83
+Maine,ME,2025,983.25
+Michigan,MI,1991,406.21
+Michigan,MI,1992,420.09
+Michigan,MI,1993,431.56
+Michigan,MI,1994,453.65
+Michigan,MI,1995,487.68
+Michigan,MI,1996,527.16
+Michigan,MI,1997,561.09
+Michigan,MI,1998,596.49
+Michigan,MI,1999,637.55
+Michigan,MI,2000,680.33
+Michigan,MI,2001,714.67
+Michigan,MI,2002,743.22
+Michigan,MI,2003,767.76
+Michigan,MI,2004,790.66
+Michigan,MI,2005,802.28
+Michigan,MI,2006,779.15
+Michigan,MI,2007,727.42
+Michigan,MI,2008,639.4
+Michigan,MI,2009,602.26
+Michigan,MI,2010,573.58
+Michigan,MI,2011,555.46
+Michigan,MI,2012,582.71
+Michigan,MI,2013,637.94
+Michigan,MI,2014,681.1
+Michigan,MI,2015,720.61
+Michigan,MI,2016,764.73
+Michigan,MI,2017,822.66
+Michigan,MI,2018,883.27
+Michigan,MI,2019,933.6
+Michigan,MI,2020,1006.84
+Michigan,MI,2021,1162.5
+Michigan,MI,2022,1290.8
+Michigan,MI,2023,1374.84
+Michigan,MI,2024,1470.57
+Michigan,MI,2025,766.2
+Minnesota,MN,1991,399.28
+Minnesota,MN,1992,412.12
+Minnesota,MN,1993,430.94
+Minnesota,MN,1994,450.43
+Minnesota,MN,1995,466.61
+Minnesota,MN,1996,489.3
+Minnesota,MN,1997,508.25
+Minnesota,MN,1998,539.31
+Minnesota,MN,1999,592.2
+Minnesota,MN,2000,659.27
+Minnesota,MN,2001,733.14
+Minnesota,MN,2002,801.56
+Minnesota,MN,2003,869.52
+Minnesota,MN,2004,931.94
+Minnesota,MN,2005,984.54
+Minnesota,MN,2006,999.33
+Minnesota,MN,2007,979.53
+Minnesota,MN,2008,898.45
+Minnesota,MN,2009,853.5
+Minnesota,MN,2010,826.23
+Minnesota,MN,2011,776.78
+Minnesota,MN,2012,802.3
+Minnesota,MN,2013,861.25
+Minnesota,MN,2014,899.14
+Minnesota,MN,2015,936.03
+Minnesota,MN,2016,991.08
+Minnesota,MN,2017,1053.29
+Minnesota,MN,2018,1118.23
+Minnesota,MN,2019,1177.06
+Minnesota,MN,2020,1256.69
+Minnesota,MN,2021,1419.3
+Minnesota,MN,2022,1542.5
+Minnesota,MN,2023,1597.81
+Minnesota,MN,2024,1664.78
+Minnesota,MN,2025,854.34
+Missouri,MO,1991,404.33
+Missouri,MO,1992,414.09
+Missouri,MO,1993,427.52
+Missouri,MO,1994,450.05
+Missouri,MO,1995,469.19
+Missouri,MO,1996,487.82
+Missouri,MO,1997,504.68
+Missouri,MO,1998,527.08
+Missouri,MO,1999,556.87
+Missouri,MO,2000,587.63
+Missouri,MO,2001,621.34
+Missouri,MO,2002,652.32
+Missouri,MO,2003,688.85
+Missouri,MO,2004,729.02
+Missouri,MO,2005,770.33
+Missouri,MO,2006,803.77
+Missouri,MO,2007,810.98
+Missouri,MO,2008,772.99
+Missouri,MO,2009,755.38
+Missouri,MO,2010,729.76
+Missouri,MO,2011,697.35
+Missouri,MO,2012,711.31
+Missouri,MO,2013,735.44
+Missouri,MO,2014,758.99
+Missouri,MO,2015,788.2
+Missouri,MO,2016,830.67
+Missouri,MO,2017,872.99
+Missouri,MO,2018,925.45
+Missouri,MO,2019,974.09
+Missouri,MO,2020,1055.1
+Missouri,MO,2021,1214.06
+Missouri,MO,2022,1365.73
+Missouri,MO,2023,1455.35
+Missouri,MO,2024,1546.56
+Missouri,MO,2025,797.8
+Mississippi,MS,1991,397.37
+Mississippi,MS,1992,412.77
+Mississippi,MS,1993,427.15
+Mississippi,MS,1994,451.84
+Mississippi,MS,1995,470.81
+Mississippi,MS,1996,488.33
+Mississippi,MS,1997,503.7
+Mississippi,MS,1998,524.58
+Mississippi,MS,1999,547.33
+Mississippi,MS,2000,563.6
+Mississippi,MS,2001,578.83
+Mississippi,MS,2002,594.83
+Mississippi,MS,2003,614.68
+Mississippi,MS,2004,639.74
+Mississippi,MS,2005,683.77
+Mississippi,MS,2006,744.55
+Mississippi,MS,2007,776.01
+Mississippi,MS,2008,754.36
+Mississippi,MS,2009,720.75
+Mississippi,MS,2010,700.01
+Mississippi,MS,2011,691.44
+Mississippi,MS,2012,695.74
+Mississippi,MS,2013,711.75
+Mississippi,MS,2014,718.94
+Mississippi,MS,2015,742.71
+Mississippi,MS,2016,762.97
+Mississippi,MS,2017,780.6
+Mississippi,MS,2018,808.25
+Mississippi,MS,2019,834.91
+Mississippi,MS,2020,885.92
+Mississippi,MS,2021,994.44
+Mississippi,MS,2022,1124.83
+Mississippi,MS,2023,1196.94
+Mississippi,MS,2024,1226.75
+Mississippi,MS,2025,641.62
+Montana,MT,1991,420.37
+Montana,MT,1992,464.33
+Montana,MT,1993,521.62
+Montana,MT,1994,572.69
+Montana,MT,1995,604.92
+Montana,MT,1996,628.7
+Montana,MT,1997,643.14
+Montana,MT,1998,656.71
+Montana,MT,1999,679.49
+Montana,MT,2000,706.23
+Montana,MT,2001,745.76
+Montana,MT,2002,792.18
+Montana,MT,2003,859.8
+Montana,MT,2004,942.75
+Montana,MT,2005,1053.24
+Montana,MT,2006,1171.56
+Montana,MT,2007,1246.15
+Montana,MT,2008,1236.37
+Montana,MT,2009,1201.68
+Montana,MT,2010,1155.55
+Montana,MT,2011,1125.22
+Montana,MT,2012,1162.72
+Montana,MT,2013,1230.82
+Montana,MT,2014,1280.99
+Montana,MT,2015,1330.71
+Montana,MT,2016,1390.49
+Montana,MT,2017,1465.86
+Montana,MT,2018,1548.1
+Montana,MT,2019,1630.17
+Montana,MT,2020,1805.97
+Montana,MT,2021,2210.46
+Montana,MT,2022,2601.38
+Montana,MT,2023,2720.75
+Montana,MT,2024,2876.52
+Montana,MT,2025,1457.34
+North Carolina,NC,1991,401.98
+North Carolina,NC,1992,412.5
+North Carolina,NC,1993,425.19
+North Carolina,NC,1994,448.5
+North Carolina,NC,1995,469.51
+North Carolina,NC,1996,491.21
+North Carolina,NC,1997,511.4
+North Carolina,NC,1998,531.44
+North Carolina,NC,1999,554.37
+North Carolina,NC,2000,575.3
+North Carolina,NC,2001,594.41
+North Carolina,NC,2002,611.73
+North Carolina,NC,2003,631.23
+North Carolina,NC,2004,660.76
+North Carolina,NC,2005,707.55
+North Carolina,NC,2006,761.93
+North Carolina,NC,2007,796.67
+North Carolina,NC,2008,786.7
+North Carolina,NC,2009,767.08
+North Carolina,NC,2010,726.9
+North Carolina,NC,2011,692.34
+North Carolina,NC,2012,691.55
+North Carolina,NC,2013,720.2
+North Carolina,NC,2014,740.73
+North Carolina,NC,2015,780.02
+North Carolina,NC,2016,824.37
+North Carolina,NC,2017,876.53
+North Carolina,NC,2018,937.26
+North Carolina,NC,2019,994.83
+North Carolina,NC,2020,1080.67
+North Carolina,NC,2021,1288.02
+North Carolina,NC,2022,1531.61
+North Carolina,NC,2023,1634.59
+North Carolina,NC,2024,1722.85
+North Carolina,NC,2025,886.03
+North Dakota,ND,1991,401.31
+North Dakota,ND,1992,417.13
+North Dakota,ND,1993,444.23
+North Dakota,ND,1994,470.81
+North Dakota,ND,1995,488.68
+North Dakota,ND,1996,500.41
+North Dakota,ND,1997,514.21
+North Dakota,ND,1998,530.55
+North Dakota,ND,1999,544.17
+North Dakota,ND,2000,557.2
+North Dakota,ND,2001,575.69
+North Dakota,ND,2002,606.18
+North Dakota,ND,2003,643.72
+North Dakota,ND,2004,686.65
+North Dakota,ND,2005,740.29
+North Dakota,ND,2006,785.81
+North Dakota,ND,2007,820.99
+North Dakota,ND,2008,840.39
+North Dakota,ND,2009,854.47
+North Dakota,ND,2010,877.26
+North Dakota,ND,2011,905.33
+North Dakota,ND,2012,978.05
+North Dakota,ND,2013,1052.58
+North Dakota,ND,2014,1128.88
+North Dakota,ND,2015,1182.08
+North Dakota,ND,2016,1202.46
+North Dakota,ND,2017,1212.75
+North Dakota,ND,2018,1230.47
+North Dakota,ND,2019,1270.09
+North Dakota,ND,2020,1310.9
+North Dakota,ND,2021,1431.83
+North Dakota,ND,2022,1558.65
+North Dakota,ND,2023,1622.95
+North Dakota,ND,2024,1684.54
+North Dakota,ND,2025,872.16
+Nebraska,NE,1991,405.96
+Nebraska,NE,1992,432.39
+Nebraska,NE,1993,463.47
+Nebraska,NE,1994,489
+Nebraska,NE,1995,513.87
+Nebraska,NE,1996,539.04
+Nebraska,NE,1997,566.75
+Nebraska,NE,1998,595.83
+Nebraska,NE,1999,623.01
+Nebraska,NE,2000,641.81
+Nebraska,NE,2001,660.21
+Nebraska,NE,2002,683.89
+Nebraska,NE,2003,711.16
+Nebraska,NE,2004,740.15
+Nebraska,NE,2005,765.56
+Nebraska,NE,2006,784.74
+Nebraska,NE,2007,792.29
+Nebraska,NE,2008,769.27
+Nebraska,NE,2009,768.5
+Nebraska,NE,2010,761.83
+Nebraska,NE,2011,756.09
+Nebraska,NE,2012,779.04
+Nebraska,NE,2013,811.47
+Nebraska,NE,2014,839.24
+Nebraska,NE,2015,879.47
+Nebraska,NE,2016,913.44
+Nebraska,NE,2017,972.96
+Nebraska,NE,2018,1035.43
+Nebraska,NE,2019,1085.76
+Nebraska,NE,2020,1169.53
+Nebraska,NE,2021,1337.47
+Nebraska,NE,2022,1491.33
+Nebraska,NE,2023,1581.43
+Nebraska,NE,2024,1677.91
+Nebraska,NE,2025,859.31
+New Hampshire,NH,1991,391.02
+New Hampshire,NH,1992,376
+New Hampshire,NH,1993,369.23
+New Hampshire,NH,1994,374.49
+New Hampshire,NH,1995,378.72
+New Hampshire,NH,1996,389.67
+New Hampshire,NH,1997,407.66
+New Hampshire,NH,1998,439.26
+New Hampshire,NH,1999,483.26
+New Hampshire,NH,2000,549.89
+New Hampshire,NH,2001,627.07
+New Hampshire,NH,2002,704.56
+New Hampshire,NH,2003,783.38
+New Hampshire,NH,2004,860.61
+New Hampshire,NH,2005,931.75
+New Hampshire,NH,2006,934.69
+New Hampshire,NH,2007,908.62
+New Hampshire,NH,2008,843.64
+New Hampshire,NH,2009,810.11
+New Hampshire,NH,2010,781.04
+New Hampshire,NH,2011,749.62
+New Hampshire,NH,2012,744.24
+New Hampshire,NH,2013,771.06
+New Hampshire,NH,2014,797.61
+New Hampshire,NH,2015,836.5
+New Hampshire,NH,2016,870.07
+New Hampshire,NH,2017,929.96
+New Hampshire,NH,2018,980.69
+New Hampshire,NH,2019,1037.11
+New Hampshire,NH,2020,1135.27
+New Hampshire,NH,2021,1354.9
+New Hampshire,NH,2022,1547.59
+New Hampshire,NH,2023,1671.78
+New Hampshire,NH,2024,1804.7
+New Hampshire,NH,2025,939.69
+New Jersey,NJ,1991,397.43
+New Jersey,NJ,1992,403.09
+New Jersey,NJ,1993,404.28
+New Jersey,NJ,1994,407.31
+New Jersey,NJ,1995,405.68
+New Jersey,NJ,1996,409.21
+New Jersey,NJ,1997,414.16
+New Jersey,NJ,1998,433.54
+New Jersey,NJ,1999,463.14
+New Jersey,NJ,2000,509.12
+New Jersey,NJ,2001,568.56
+New Jersey,NJ,2002,649.47
+New Jersey,NJ,2003,739.64
+New Jersey,NJ,2004,845.89
+New Jersey,NJ,2005,965.97
+New Jersey,NJ,2006,1021.81
+New Jersey,NJ,2007,1008.2
+New Jersey,NJ,2008,938.8
+New Jersey,NJ,2009,880.78
+New Jersey,NJ,2010,857.1
+New Jersey,NJ,2011,810.53
+New Jersey,NJ,2012,792.75
+New Jersey,NJ,2013,810.37
+New Jersey,NJ,2014,826.39
+New Jersey,NJ,2015,841.72
+New Jersey,NJ,2016,860.26
+New Jersey,NJ,2017,888.87
+New Jersey,NJ,2018,924.86
+New Jersey,NJ,2019,954.92
+New Jersey,NJ,2020,1031.07
+New Jersey,NJ,2021,1198.13
+New Jersey,NJ,2022,1345.82
+New Jersey,NJ,2023,1462.06
+New Jersey,NJ,2024,1603.59
+New Jersey,NJ,2025,849.37
+New Mexico,NM,1991,406.65
+New Mexico,NM,1992,431.93
+New Mexico,NM,1993,466.77
+New Mexico,NM,1994,517.08
+New Mexico,NM,1995,544.49
+New Mexico,NM,1996,553.94
+New Mexico,NM,1997,558.16
+New Mexico,NM,1998,566.47
+New Mexico,NM,1999,579.16
+New Mexico,NM,2000,583.84
+New Mexico,NM,2001,601.68
+New Mexico,NM,2002,629.84
+New Mexico,NM,2003,670.04
+New Mexico,NM,2004,723.94
+New Mexico,NM,2005,815.72
+New Mexico,NM,2006,922.65
+New Mexico,NM,2007,966.64
+New Mexico,NM,2008,943.76
+New Mexico,NM,2009,894.93
+New Mexico,NM,2010,860.25
+New Mexico,NM,2011,810.13
+New Mexico,NM,2012,810.86
+New Mexico,NM,2013,827.51
+New Mexico,NM,2014,839.02
+New Mexico,NM,2015,856.98
+New Mexico,NM,2016,877.57
+New Mexico,NM,2017,918.53
+New Mexico,NM,2018,955.94
+New Mexico,NM,2019,1008.56
+New Mexico,NM,2020,1098.93
+New Mexico,NM,2021,1253.67
+New Mexico,NM,2022,1425.83
+New Mexico,NM,2023,1510.64
+New Mexico,NM,2024,1595
+New Mexico,NM,2025,828.47
+Nevada,NV,1991,403.45
+Nevada,NV,1992,413.39
+Nevada,NV,1993,422.01
+Nevada,NV,1994,436.79
+Nevada,NV,1995,451.66
+Nevada,NV,1996,461.01
+Nevada,NV,1997,469.87
+Nevada,NV,1998,475.43
+Nevada,NV,1999,489.76
+Nevada,NV,2000,506.6
+Nevada,NV,2001,540.13
+Nevada,NV,2002,581.19
+Nevada,NV,2003,652.6
+Nevada,NV,2004,844.93
+Nevada,NV,2005,1024.86
+Nevada,NV,2006,1084.06
+Nevada,NV,2007,1009.3
+Nevada,NV,2008,762.7
+Nevada,NV,2009,562.27
+Nevada,NV,2010,518.02
+Nevada,NV,2011,461.22
+Nevada,NV,2012,491.35
+Nevada,NV,2013,606.49
+Nevada,NV,2014,683.2
+Nevada,NV,2015,751.44
+Nevada,NV,2016,822.23
+Nevada,NV,2017,900.01
+Nevada,NV,2018,1019.46
+Nevada,NV,2019,1084.44
+Nevada,NV,2020,1157.27
+Nevada,NV,2021,1388.94
+Nevada,NV,2022,1580.45
+Nevada,NV,2023,1559.78
+Nevada,NV,2024,1666.5
+Nevada,NV,2025,852.23
+New York,NY,1991,400.57
+New York,NY,1992,406.01
+New York,NY,1993,403.94
+New York,NY,1994,399.15
+New York,NY,1995,396.1
+New York,NY,1996,398.33
+New York,NY,1997,403.39
+New York,NY,1998,421.78
+New York,NY,1999,454.81
+New York,NY,2000,497.29
+New York,NY,2001,547.19
+New York,NY,2002,610.62
+New York,NY,2003,683.92
+New York,NY,2004,759.39
+New York,NY,2005,829.39
+New York,NY,2006,864.76
+New York,NY,2007,867.09
+New York,NY,2008,845.81
+New York,NY,2009,816.68
+New York,NY,2010,809.26
+New York,NY,2011,786.49
+New York,NY,2012,783.32
+New York,NY,2013,797.49
+New York,NY,2014,807.24
+New York,NY,2015,828.53
+New York,NY,2016,858.19
+New York,NY,2017,901.29
+New York,NY,2018,951.33
+New York,NY,2019,988.92
+New York,NY,2020,1061.49
+New York,NY,2021,1218.78
+New York,NY,2022,1361.28
+New York,NY,2023,1450.45
+New York,NY,2024,1572.76
+New York,NY,2025,832.2
+Ohio,OH,1991,406.07
+Ohio,OH,1992,424.46
+Ohio,OH,1993,443.28
+Ohio,OH,1994,464.7
+Ohio,OH,1995,484.41
+Ohio,OH,1996,505.79
+Ohio,OH,1997,520.59
+Ohio,OH,1998,539.78
+Ohio,OH,1999,564.68
+Ohio,OH,2000,586.81
+Ohio,OH,2001,607.79
+Ohio,OH,2002,629.24
+Ohio,OH,2003,651.7
+Ohio,OH,2004,673.37
+Ohio,OH,2005,692.06
+Ohio,OH,2006,697.85
+Ohio,OH,2007,685.46
+Ohio,OH,2008,645.12
+Ohio,OH,2009,623.89
+Ohio,OH,2010,610.16
+Ohio,OH,2011,585.28
+Ohio,OH,2012,596.73
+Ohio,OH,2013,617.17
+Ohio,OH,2014,641.03
+Ohio,OH,2015,664.88
+Ohio,OH,2016,696.81
+Ohio,OH,2017,737.1
+Ohio,OH,2018,782.17
+Ohio,OH,2019,828.59
+Ohio,OH,2020,903.75
+Ohio,OH,2021,1035.71
+Ohio,OH,2022,1158.74
+Ohio,OH,2023,1242.19
+Ohio,OH,2024,1333.06
+Ohio,OH,2025,696.7
+Oklahoma,OK,1991,404.88
+Oklahoma,OK,1992,414.99
+Oklahoma,OK,1993,435.03
+Oklahoma,OK,1994,456.82
+Oklahoma,OK,1995,469.36
+Oklahoma,OK,1996,484.86
+Oklahoma,OK,1997,498.75
+Oklahoma,OK,1998,519.74
+Oklahoma,OK,1999,545.91
+Oklahoma,OK,2000,568.55
+Oklahoma,OK,2001,590.43
+Oklahoma,OK,2002,612.32
+Oklahoma,OK,2003,635.04
+Oklahoma,OK,2004,660.48
+Oklahoma,OK,2005,695.53
+Oklahoma,OK,2006,733.89
+Oklahoma,OK,2007,768.2
+Oklahoma,OK,2008,767.48
+Oklahoma,OK,2009,770.7
+Oklahoma,OK,2010,767.8
+Oklahoma,OK,2011,753.53
+Oklahoma,OK,2012,771.98
+Oklahoma,OK,2013,801.41
+Oklahoma,OK,2014,823.71
+Oklahoma,OK,2015,862.42
+Oklahoma,OK,2016,878.51
+Oklahoma,OK,2017,912.91
+Oklahoma,OK,2018,940.11
+Oklahoma,OK,2019,982.11
+Oklahoma,OK,2020,1051.42
+Oklahoma,OK,2021,1196.99
+Oklahoma,OK,2022,1351.47
+Oklahoma,OK,2023,1432
+Oklahoma,OK,2024,1493.22
+Oklahoma,OK,2025,765.7
+Oregon,OR,1991,412.21
+Oregon,OR,1992,447.01
+Oregon,OR,1993,485.38
+Oregon,OR,1994,535.81
+Oregon,OR,1995,580.56
+Oregon,OR,1996,621.68
+Oregon,OR,1997,656.79
+Oregon,OR,1998,678.25
+Oregon,OR,1999,702.18
+Oregon,OR,2000,724.76
+Oregon,OR,2001,758.26
+Oregon,OR,2002,799.41
+Oregon,OR,2003,856.4
+Oregon,OR,2004,946.26
+Oregon,OR,2005,1103.49
+Oregon,OR,2006,1269.58
+Oregon,OR,2007,1329.65
+Oregon,OR,2008,1247.71
+Oregon,OR,2009,1134.11
+Oregon,OR,2010,1050.54
+Oregon,OR,2011,972.08
+Oregon,OR,2012,1002.88
+Oregon,OR,2013,1111.55
+Oregon,OR,2014,1191.66
+Oregon,OR,2015,1296.53
+Oregon,OR,2016,1438.8
+Oregon,OR,2017,1550.13
+Oregon,OR,2018,1658.8
+Oregon,OR,2019,1735.89
+Oregon,OR,2020,1879.31
+Oregon,OR,2021,2216.19
+Oregon,OR,2022,2443.73
+Oregon,OR,2023,2439.42
+Oregon,OR,2024,2510.25
+Oregon,OR,2025,1267.32
+Pennsylvania,PA,1991,402.35
+Pennsylvania,PA,1992,409.71
+Pennsylvania,PA,1993,414.62
+Pennsylvania,PA,1994,420.15
+Pennsylvania,PA,1995,420.05
+Pennsylvania,PA,1996,424.53
+Pennsylvania,PA,1997,428.69
+Pennsylvania,PA,1998,438.57
+Pennsylvania,PA,1999,455.43
+Pennsylvania,PA,2000,476.99
+Pennsylvania,PA,2001,506.72
+Pennsylvania,PA,2002,546.05
+Pennsylvania,PA,2003,594.8
+Pennsylvania,PA,2004,657.48
+Pennsylvania,PA,2005,729.3
+Pennsylvania,PA,2006,779.81
+Pennsylvania,PA,2007,798.01
+Pennsylvania,PA,2008,775.56
+Pennsylvania,PA,2009,750.5
+Pennsylvania,PA,2010,742.5
+Pennsylvania,PA,2011,721.69
+Pennsylvania,PA,2012,723.04
+Pennsylvania,PA,2013,744.17
+Pennsylvania,PA,2014,757.96
+Pennsylvania,PA,2015,776.03
+Pennsylvania,PA,2016,803.78
+Pennsylvania,PA,2017,838.85
+Pennsylvania,PA,2018,879.88
+Pennsylvania,PA,2019,922.79
+Pennsylvania,PA,2020,991.4
+Pennsylvania,PA,2021,1127.8
+Pennsylvania,PA,2022,1247.13
+Pennsylvania,PA,2023,1323.49
+Pennsylvania,PA,2024,1413.44
+Pennsylvania,PA,2025,736.93
+Rhode Island,RI,1991,390.01
+Rhode Island,RI,1992,381.78
+Rhode Island,RI,1993,372.75
+Rhode Island,RI,1994,370.32
+Rhode Island,RI,1995,367.14
+Rhode Island,RI,1996,363.55
+Rhode Island,RI,1997,366.09
+Rhode Island,RI,1998,381.71
+Rhode Island,RI,1999,409.26
+Rhode Island,RI,2000,455.64
+Rhode Island,RI,2001,520.66
+Rhode Island,RI,2002,617.97
+Rhode Island,RI,2003,724.97
+Rhode Island,RI,2004,844.28
+Rhode Island,RI,2005,933.34
+Rhode Island,RI,2006,938.58
+Rhode Island,RI,2007,894.15
+Rhode Island,RI,2008,810.35
+Rhode Island,RI,2009,761.35
+Rhode Island,RI,2010,729.89
+Rhode Island,RI,2011,693.96
+Rhode Island,RI,2012,681.82
+Rhode Island,RI,2013,699.8
+Rhode Island,RI,2014,730.06
+Rhode Island,RI,2015,756.64
+Rhode Island,RI,2016,794.61
+Rhode Island,RI,2017,848.56
+Rhode Island,RI,2018,908.31
+Rhode Island,RI,2019,953.55
+Rhode Island,RI,2020,1035.36
+Rhode Island,RI,2021,1229.22
+Rhode Island,RI,2022,1376.49
+Rhode Island,RI,2023,1493.31
+Rhode Island,RI,2024,1618.22
+Rhode Island,RI,2025,854.57
+South Carolina,SC,1991,405.43
+South Carolina,SC,1992,417.22
+South Carolina,SC,1993,427.22
+South Carolina,SC,1994,442.19
+South Carolina,SC,1995,457.32
+South Carolina,SC,1996,476.76
+South Carolina,SC,1997,494.24
+South Carolina,SC,1998,517.3
+South Carolina,SC,1999,546.91
+South Carolina,SC,2000,573.71
+South Carolina,SC,2001,594.13
+South Carolina,SC,2002,614.71
+South Carolina,SC,2003,634.37
+South Carolina,SC,2004,668.9
+South Carolina,SC,2005,716.39
+South Carolina,SC,2006,770.63
+South Carolina,SC,2007,801.03
+South Carolina,SC,2008,784.89
+South Carolina,SC,2009,760.02
+South Carolina,SC,2010,724.31
+South Carolina,SC,2011,683.45
+South Carolina,SC,2012,688.89
+South Carolina,SC,2013,719.53
+South Carolina,SC,2014,745.41
+South Carolina,SC,2015,793.53
+South Carolina,SC,2016,837.53
+South Carolina,SC,2017,886.2
+South Carolina,SC,2018,946.66
+South Carolina,SC,2019,1002.33
+South Carolina,SC,2020,1081.41
+South Carolina,SC,2021,1270.08
+South Carolina,SC,2022,1496.62
+South Carolina,SC,2023,1612.81
+South Carolina,SC,2024,1721.74
+South Carolina,SC,2025,881.46
+South Dakota,SD,1991,409.62
+South Dakota,SD,1992,435.82
+South Dakota,SD,1993,467.45
+South Dakota,SD,1994,502.05
+South Dakota,SD,1995,519.07
+South Dakota,SD,1996,543.67
+South Dakota,SD,1997,560.35
+South Dakota,SD,1998,583.02
+South Dakota,SD,1999,608.45
+South Dakota,SD,2000,635.54
+South Dakota,SD,2001,663.57
+South Dakota,SD,2002,688.07
+South Dakota,SD,2003,721.36
+South Dakota,SD,2004,761.2
+South Dakota,SD,2005,806.96
+South Dakota,SD,2006,845.53
+South Dakota,SD,2007,873.32
+South Dakota,SD,2008,886.46
+South Dakota,SD,2009,886.68
+South Dakota,SD,2010,876.74
+South Dakota,SD,2011,874.8
+South Dakota,SD,2012,892.88
+South Dakota,SD,2013,931.76
+South Dakota,SD,2014,968.8
+South Dakota,SD,2015,1005.12
+South Dakota,SD,2016,1057.37
+South Dakota,SD,2017,1106.84
+South Dakota,SD,2018,1171.23
+South Dakota,SD,2019,1223.26
+South Dakota,SD,2020,1304.06
+South Dakota,SD,2021,1522.02
+South Dakota,SD,2022,1740.63
+South Dakota,SD,2023,1849.83
+South Dakota,SD,2024,1923.68
+South Dakota,SD,2025,984.1
+Tennessee,TN,1991,403.23
+Tennessee,TN,1992,414.22
+Tennessee,TN,1993,429.97
+Tennessee,TN,1994,455.12
+Tennessee,TN,1995,480.84
+Tennessee,TN,1996,504.85
+Tennessee,TN,1997,523.23
+Tennessee,TN,1998,543.44
+Tennessee,TN,1999,565.99
+Tennessee,TN,2000,582.85
+Tennessee,TN,2001,596.98
+Tennessee,TN,2002,614.58
+Tennessee,TN,2003,639.03
+Tennessee,TN,2004,670.26
+Tennessee,TN,2005,716.93
+Tennessee,TN,2006,769.63
+Tennessee,TN,2007,800.92
+Tennessee,TN,2008,780.38
+Tennessee,TN,2009,753.37
+Tennessee,TN,2010,730.74
+Tennessee,TN,2011,711.61
+Tennessee,TN,2012,722.76
+Tennessee,TN,2013,758.23
+Tennessee,TN,2014,789.67
+Tennessee,TN,2015,833.93
+Tennessee,TN,2016,888.11
+Tennessee,TN,2017,953.06
+Tennessee,TN,2018,1022.14
+Tennessee,TN,2019,1092.94
+Tennessee,TN,2020,1195.65
+Tennessee,TN,2021,1435.85
+Tennessee,TN,2022,1699.97
+Tennessee,TN,2023,1785.44
+Tennessee,TN,2024,1880.73
+Tennessee,TN,2025,958.01
+Texas,TX,1991,402.31
+Texas,TX,1992,411.82
+Texas,TX,1993,424.58
+Texas,TX,1994,438.76
+Texas,TX,1995,447.06
+Texas,TX,1996,456.62
+Texas,TX,1997,466.5
+Texas,TX,1998,490.69
+Texas,TX,1999,521.56
+Texas,TX,2000,557.89
+Texas,TX,2001,586.24
+Texas,TX,2002,605.79
+Texas,TX,2003,620.64
+Texas,TX,2004,639.89
+Texas,TX,2005,671.96
+Texas,TX,2006,714.01
+Texas,TX,2007,750.45
+Texas,TX,2008,752.84
+Texas,TX,2009,748.85
+Texas,TX,2010,747.78
+Texas,TX,2011,738.02
+Texas,TX,2012,768.35
+Texas,TX,2013,818.3
+Texas,TX,2014,874.2
+Texas,TX,2015,933.43
+Texas,TX,2016,995.74
+Texas,TX,2017,1064.39
+Texas,TX,2018,1126.9
+Texas,TX,2019,1178.34
+Texas,TX,2020,1254.71
+Texas,TX,2021,1464.93
+Texas,TX,2022,1688.78
+Texas,TX,2023,1738.38
+Texas,TX,2024,1782.01
+Texas,TX,2025,900.03
+Utah,UT,1991,407.44
+Utah,UT,1992,439.72
+Utah,UT,1993,501.04
+Utah,UT,1994,582.42
+Utah,UT,1995,636.43
+Utah,UT,1996,686.49
+Utah,UT,1997,711.76
+Utah,UT,1998,736.52
+Utah,UT,1999,754.78
+Utah,UT,2000,771.08
+Utah,UT,2001,784.79
+Utah,UT,2002,797.88
+Utah,UT,2003,817.87
+Utah,UT,2004,864.62
+Utah,UT,2005,960.48
+Utah,UT,2006,1120.85
+Utah,UT,2007,1255.67
+Utah,UT,2008,1197.7
+Utah,UT,2009,1074.83
+Utah,UT,2010,1011.76
+Utah,UT,2011,948.97
+Utah,UT,2012,1010.61
+Utah,UT,2013,1109.83
+Utah,UT,2014,1161.21
+Utah,UT,2015,1231.99
+Utah,UT,2016,1331.43
+Utah,UT,2017,1451.49
+Utah,UT,2018,1596.93
+Utah,UT,2019,1725.09
+Utah,UT,2020,1919.17
+Utah,UT,2021,2415.64
+Utah,UT,2022,2764.44
+Utah,UT,2023,2717.79
+Utah,UT,2024,2840.94
+Utah,UT,2025,1462.14
+Virginia,VA,1991,400.09
+Virginia,VA,1992,404.81
+Virginia,VA,1993,407.84
+Virginia,VA,1994,416.03
+Virginia,VA,1995,421.28
+Virginia,VA,1996,428.24
+Virginia,VA,1997,436.8
+Virginia,VA,1998,449.55
+Virginia,VA,1999,475.61
+Virginia,VA,2000,509.35
+Virginia,VA,2001,556.01
+Virginia,VA,2002,606.91
+Virginia,VA,2003,672.63
+Virginia,VA,2004,767.21
+Virginia,VA,2005,889.4
+Virginia,VA,2006,969.79
+Virginia,VA,2007,978.35
+Virginia,VA,2008,892.21
+Virginia,VA,2009,852.06
+Virginia,VA,2010,833.81
+Virginia,VA,2011,806.83
+Virginia,VA,2012,823.6
+Virginia,VA,2013,854.03
+Virginia,VA,2014,872.37
+Virginia,VA,2015,891.82
+Virginia,VA,2016,924
+Virginia,VA,2017,960.14
+Virginia,VA,2018,1004.45
+Virginia,VA,2019,1050.37
+Virginia,VA,2020,1128.71
+Virginia,VA,2021,1286.95
+Virginia,VA,2022,1440.33
+Virginia,VA,2023,1532.39
+Virginia,VA,2024,1631.77
+Virginia,VA,2025,851.34
+Vermont,VT,1991,396.39
+Vermont,VT,1992,401.78
+Vermont,VT,1993,403.21
+Vermont,VT,1994,405.86
+Vermont,VT,1995,402.03
+Vermont,VT,1996,411.8
+Vermont,VT,1997,409.85
+Vermont,VT,1998,425.35
+Vermont,VT,1999,449.3
+Vermont,VT,2000,488.06
+Vermont,VT,2001,533.84
+Vermont,VT,2002,580.67
+Vermont,VT,2003,627.82
+Vermont,VT,2004,717.15
+Vermont,VT,2005,803.97
+Vermont,VT,2006,847.87
+Vermont,VT,2007,863.89
+Vermont,VT,2008,848
+Vermont,VT,2009,832.55
+Vermont,VT,2010,811.93
+Vermont,VT,2011,801.13
+Vermont,VT,2012,809.01
+Vermont,VT,2013,821.35
+Vermont,VT,2014,818.17
+Vermont,VT,2015,833.41
+Vermont,VT,2016,843.4
+Vermont,VT,2017,889.56
+Vermont,VT,2018,914.14
+Vermont,VT,2019,960.14
+Vermont,VT,2020,1031.13
+Vermont,VT,2021,1221.18
+Vermont,VT,2022,1401.16
+Vermont,VT,2023,1531.14
+Vermont,VT,2024,1677.05
+Vermont,VT,2025,851.07
+Washington,WA,1991,407.39
+Washington,WA,1992,425.2
+Washington,WA,1993,445.87
+Washington,WA,1994,471.13
+Washington,WA,1995,480.84
+Washington,WA,1996,490.45
+Washington,WA,1997,510.97
+Washington,WA,1998,546.83
+Washington,WA,1999,579.9
+Washington,WA,2000,609.14
+Washington,WA,2001,638.88
+Washington,WA,2002,671.5
+Washington,WA,2003,713.67
+Washington,WA,2004,792.48
+Washington,WA,2005,915.5
+Washington,WA,2006,1045.43
+Washington,WA,2007,1110.3
+Washington,WA,2008,1047.7
+Washington,WA,2009,957.66
+Washington,WA,2010,908.74
+Washington,WA,2011,826.88
+Washington,WA,2012,839.84
+Washington,WA,2013,911.4
+Washington,WA,2014,965.06
+Washington,WA,2015,1054.04
+Washington,WA,2016,1163.02
+Washington,WA,2017,1291.79
+Washington,WA,2018,1419.34
+Washington,WA,2019,1510.71
+Washington,WA,2020,1673.24
+Washington,WA,2021,2000.27
+Washington,WA,2022,2245.61
+Washington,WA,2023,2235.82
+Washington,WA,2024,2330.11
+Washington,WA,2025,1198.48
+Wisconsin,WI,1991,409.5
+Wisconsin,WI,1992,435.98
+Wisconsin,WI,1993,469.99
+Wisconsin,WI,1994,504.15
+Wisconsin,WI,1995,526.52
+Wisconsin,WI,1996,546.35
+Wisconsin,WI,1997,563.7
+Wisconsin,WI,1998,586.88
+Wisconsin,WI,1999,618.25
+Wisconsin,WI,2000,655.41
+Wisconsin,WI,2001,691.36
+Wisconsin,WI,2002,729.07
+Wisconsin,WI,2003,774.67
+Wisconsin,WI,2004,829.05
+Wisconsin,WI,2005,873.77
+Wisconsin,WI,2006,900.74
+Wisconsin,WI,2007,901.03
+Wisconsin,WI,2008,870.88
+Wisconsin,WI,2009,844.86
+Wisconsin,WI,2010,814.82
+Wisconsin,WI,2011,777.96
+Wisconsin,WI,2012,778.08
+Wisconsin,WI,2013,804.09
+Wisconsin,WI,2014,826.1
+Wisconsin,WI,2015,858.49
+Wisconsin,WI,2016,900.84
+Wisconsin,WI,2017,952.72
+Wisconsin,WI,2018,1017.3
+Wisconsin,WI,2019,1078.34
+Wisconsin,WI,2020,1161.89
+Wisconsin,WI,2021,1326.46
+Wisconsin,WI,2022,1488.79
+Wisconsin,WI,2023,1610.09
+Wisconsin,WI,2024,1735.55
+Wisconsin,WI,2025,909.44
+West Virginia,WV,1991,403.76
+West Virginia,WV,1992,423.34
+West Virginia,WV,1993,446.84
+West Virginia,WV,1994,476.77
+West Virginia,WV,1995,497.42
+West Virginia,WV,1996,509.65
+West Virginia,WV,1997,516.96
+West Virginia,WV,1998,530.25
+West Virginia,WV,1999,543.09
+West Virginia,WV,2000,551.36
+West Virginia,WV,2001,563.08
+West Virginia,WV,2002,586.86
+West Virginia,WV,2003,614.43
+West Virginia,WV,2004,656.79
+West Virginia,WV,2005,705.51
+West Virginia,WV,2006,738.78
+West Virginia,WV,2007,762.48
+West Virginia,WV,2008,755.15
+West Virginia,WV,2009,740.87
+West Virginia,WV,2010,741.34
+West Virginia,WV,2011,727.69
+West Virginia,WV,2012,753.73
+West Virginia,WV,2013,763.53
+West Virginia,WV,2014,787.49
+West Virginia,WV,2015,802.15
+West Virginia,WV,2016,813.94
+West Virginia,WV,2017,817.19
+West Virginia,WV,2018,833.98
+West Virginia,WV,2019,870.28
+West Virginia,WV,2020,900.16
+West Virginia,WV,2021,1013.41
+West Virginia,WV,2022,1119
+West Virginia,WV,2023,1197.51
+West Virginia,WV,2024,1268.32
+West Virginia,WV,2025,655.63
+Wyoming,WY,1991,414.38
+Wyoming,WY,1992,437.27
+Wyoming,WY,1993,471.5
+Wyoming,WY,1994,523.98
+Wyoming,WY,1995,560.61
+Wyoming,WY,1996,583.46
+Wyoming,WY,1997,597.77
+Wyoming,WY,1998,616.43
+Wyoming,WY,1999,635
+Wyoming,WY,2000,664.69
+Wyoming,WY,2001,696.45
+Wyoming,WY,2002,754.78
+Wyoming,WY,2003,809.88
+Wyoming,WY,2004,888.73
+Wyoming,WY,2005,988.17
+Wyoming,WY,2006,1114.18
+Wyoming,WY,2007,1210.22
+Wyoming,WY,2008,1213.38
+Wyoming,WY,2009,1152.66
+Wyoming,WY,2010,1120.99
+Wyoming,WY,2011,1122.64
+Wyoming,WY,2012,1153.22
+Wyoming,WY,2013,1176.52
+Wyoming,WY,2014,1227.42
+Wyoming,WY,2015,1268.45
+Wyoming,WY,2016,1278.68
+Wyoming,WY,2017,1301.31
+Wyoming,WY,2018,1345.15
+Wyoming,WY,2019,1414.4
+Wyoming,WY,2020,1510.99
+Wyoming,WY,2021,1713.23
+Wyoming,WY,2022,1941.64
+Wyoming,WY,2023,2017.86
+Wyoming,WY,2024,2137.36
+Wyoming,WY,2025,1111.42
