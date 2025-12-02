@@ -286,12 +286,13 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
 
     const lastDate = d3.max(data, d => d.date);
 
-    // orders layers by final value
+    // orders layers by end values
     const sortedKeys = keys.slice().sort((a, b) => {
         const finalRow = data.find(d => d.date.getTime() === lastDate.getTime());
         return (finalRow?.[a] ?? 0) - (finalRow?.[b] ?? 0);
     });
 
+    // scale the axis'
     const x = d3.scaleTime()
         .domain([new Date(1990, 0, 1), lastDate])
         .range([0, width]);
@@ -309,9 +310,11 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
         .y0(d => y(d[0]))
         .y1(d => y(d[1]));
 
+    // draws layers
     svg.selectAll(".layer")
         .data(stackedData)
-        .enter().append("path")
+        .enter()
+        .append("path")
         .attr("class", "layer")
         .attr("d", area)
         .attr("fill", d => colors[d.key])
@@ -328,9 +331,12 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
     svg.append("g")
         .call(d3.axisLeft(y).tickFormat(() => ""));
 
-    // labels end values of each layer, which is just the 2025 index_nsa value
+    // render right side ending values
     stackedData.forEach(layer => {
-        const lastPoint = layer.find(p => p.data.date.getTime() === lastDate.getTime());
+        const key = layer.key;
+        const lastPoint = layer.find(
+            p => p.data.date.getTime() === lastDate.getTime()
+        );
         if (!lastPoint) return;
 
         const yMid = (lastPoint[0] + lastPoint[1]) / 2;
@@ -341,8 +347,31 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
             .attr("alignment-baseline", "middle")
             .style("font-size", "13px")
             .style("font-weight", "600")
-            .style("fill", colors[layer.key])
-            .text(Math.round(lastPoint.data[layer.key]));
+            .style("fill", colors[key])
+            .text(Math.round(lastPoint.data[key]));
+    });
+
+    // render left side starting values
+    const firstDate = d3.min(data, d => d.date);
+
+    stackedData.forEach(layer => {
+        const key = layer.key;
+        const firstPoint = layer.find(
+            p => p.data.date.getTime() === firstDate.getTime()
+        );
+        if (!firstPoint) return;
+
+        const yMidLeft = (firstPoint[0] + firstPoint[1]) / 2;
+
+        svg.append("text")
+            .attr("x", -10)
+            .attr("y", y(yMidLeft))
+            .attr("text-anchor", "end")
+            .attr("alignment-baseline", "middle")
+            .style("font-size", "13px")
+            .style("font-weight", "600")
+            .style("fill", colors[key])
+            .text(Math.round(firstPoint.data[key]));
     });
 
     svg.append("text")
@@ -373,6 +402,7 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
             .text(k);
     });
 }
+
 
 
 // bubble graph code
