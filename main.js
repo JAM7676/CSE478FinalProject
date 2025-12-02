@@ -281,18 +281,15 @@ function showBackButton(callback) {
 
 // stack renderer
 function renderStackedArea(data, keys, colors, title, clickHandler = null) {
-
     clearSVG();
 
     const lastDate = d3.max(data, d => d.date);
 
-    // orders layers by end values
     const sortedKeys = keys.slice().sort((a, b) => {
         const finalRow = data.find(d => d.date.getTime() === lastDate.getTime());
         return (finalRow?.[a] ?? 0) - (finalRow?.[b] ?? 0);
     });
 
-    // scale the axis'
     const x = d3.scaleTime()
         .domain([new Date(1990, 0, 1), lastDate])
         .range([0, width]);
@@ -310,11 +307,17 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
         .y0(d => y(d[0]))
         .y1(d => y(d[1]));
 
-    // draws layers
-    svg.selectAll(".layer")
+    // creates path for animation
+    const clip = svg.append("clipPath")
+        .attr("id", "reveal-clip")
+        .append("rect")
+        .attr("width", 0)
+        .attr("height", height);
+
+    // render layers
+    const layers = svg.selectAll(".layer")
         .data(stackedData)
-        .enter()
-        .append("path")
+        .join("path")
         .attr("class", "layer")
         .attr("d", area)
         .attr("fill", d => colors[d.key])
@@ -322,8 +325,16 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
         .attr("stroke-width", 1.2)
         .attr("opacity", 0.9)
         .style("cursor", clickHandler ? "pointer" : "default")
-        .on("click", (event, d) => clickHandler && clickHandler(d.key));
+        .on("click", (event, d) => clickHandler && clickHandler(d.key))
+        .attr("clip-path", "url(#reveal-clip)");
 
+    // animation filling in the graph left to right
+    clip.transition()
+        .duration(900)
+        .ease(d3.easeCubicOut)
+        .attr("width", width);
+
+    // render axis'
     svg.append("g")
         .attr("transform", `translate(0,${height})`)
         .call(d3.axisBottom(x));
@@ -331,12 +342,10 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
     svg.append("g")
         .call(d3.axisLeft(y).tickFormat(() => ""));
 
-    // render right side ending values
+    // render right side starting values
     stackedData.forEach(layer => {
         const key = layer.key;
-        const lastPoint = layer.find(
-            p => p.data.date.getTime() === lastDate.getTime()
-        );
+        const lastPoint = layer.find(p => p.data.date.getTime() === lastDate.getTime());
         if (!lastPoint) return;
 
         const yMid = (lastPoint[0] + lastPoint[1]) / 2;
@@ -356,9 +365,7 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
 
     stackedData.forEach(layer => {
         const key = layer.key;
-        const firstPoint = layer.find(
-            p => p.data.date.getTime() === firstDate.getTime()
-        );
+        const firstPoint = layer.find(p => p.data.date.getTime() === firstDate.getTime());
         if (!firstPoint) return;
 
         const yMidLeft = (firstPoint[0] + firstPoint[1]) / 2;
@@ -402,6 +409,7 @@ function renderStackedArea(data, keys, colors, title, clickHandler = null) {
             .text(k);
     });
 }
+
 
 
 
